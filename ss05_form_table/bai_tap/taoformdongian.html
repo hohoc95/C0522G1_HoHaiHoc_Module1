@@ -2,11 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tạo form đơn giản</title>
+    <title>Đăng ký học viên</title>
 </head>
 <body>
-    <form>
-        <h2>Sở thích của bạn</h2>
-    </form>
+<form>
+    <table border="0" style="background-color: lightgoldenrodyellow">
+
+        <tr>
+            <td colspan="2">
+                <h1 style="color:blue">ĐĂNG KÝ HỌC VIÊN</h1>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Họ và tên</td>
+            <td><input type="text" name="name"/></td>
+        </tr>
+        <tr>
+            <td>Ngày sinh</td>
+            <td><input type="number" name="date of birth"/></td>
+        </tr>
+        <tr>
+            <td>Giới tính</td>
+            <td><input type="radio" name="gender"/>Nam
+            <input type="radio" name="gender"/>Nữ</td>
+        </tr>
+        <tr>
+            <td>Địa chỉ</td>
+            <td><input type="textarea" name="address"/></td>
+        </tr>
+        <tr>
+            <td>Lớp</td>
+            <td>
+                <select name="class">
+                    <option value="-Chọn lớp-">1</option>
+                    <option value="-Chọn lớp-">2</option>
+                    <option value="-Chọn lớp-">3</option>
+                    <option value="-Chọn lớp-">4</option>
+                    <option value="-Chọn lớp-">5</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" name="email"/></td>
+        </tr>
+        <tr>
+            <td>Điện thoại</td>
+            <td><input type="number" name="phone"/></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center">
+                <input type="submit" name="đăng ký"/>
+                <input type="reset" name="Nhập lại"/>
+            </td>
+        </tr>
+
+    </table>
+</form>
 </body>
 </html>
