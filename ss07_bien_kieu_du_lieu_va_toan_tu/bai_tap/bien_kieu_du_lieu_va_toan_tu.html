@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!-- Bài 1 -->
+<script>
+    mathPoint = prompt('Nhap diem mon Toan');
+    physicalPoint = prompt('Nhap diem mon Vat ly');
+    chemistryPoint = prompt('Nhap diem mon Hoa');
+    biologicalPoint = prompt('Nhap diem mon Sinh');
+    averagePoint = (parseInt(mathPoint) + parseInt(physicalPoint) + parseInt(chemistryPoint) + parseInt(biologicalPoint)) /4 ;
+    totalPoint = parseInt(mathPoint) + parseInt(physicalPoint) + parseInt(chemistryPoint) + parseInt(biologicalPoint);
+    document.write('Diem trung binh la: ' + averagePoint +"<br>");
+
+    document.write(' Tong diem la: '+ totalPoint);
+</script>
+
+<!--Bài 2 Chuyen doi nhiet do
+<script>
+    let c = prompt('Nhập vào độ C');
+    let f = parseFloat(c) *1.8 + 32 ;
+    document.write('Độ F là ' + f)
+</script>
+-->
+
+<!-- Bài 3 và bài 4 Chu vi và diện tích hình tròn
+<script>
+    let bankinh = prompt('Nhập vào bán kính');
+    let chuvi = 2*3.14*parseFloat(bankinh);
+    document.write('Chu vi bằng: ' + chuvi)
+    let dientich = .14*parseFloat(bankinh)*parseFloat(bankinh);
+    document.write('Diện tích bằng: ' + dientich)
+    }
+</script>
+-->
+</body>
+</html>
