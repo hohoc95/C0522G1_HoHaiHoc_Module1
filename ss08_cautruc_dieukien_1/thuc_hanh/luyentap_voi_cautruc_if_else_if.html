@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập với cấu trúc If...else...if</title>
+</head>
+<body>
+<script>
+    let account = prompt('Nhập tài khoản');
+    if(account == 'Admin' || account == 'admin'){
+        let password = prompt('nhập password');
+        if(password == 'The master'){
+            alert('Welcome')
+        }
+        else if(typeof password == null){
+            alert('Canceled')
+        }
+        else {
+            alert('Wrong pass')
+        }
+    }
+    // else cái gì bây giờ !!!!!!
+    else if (typeof account == null){
+        alert('Canceled')
+    }
+    else {
+        alert('I don \'t know you')
+    }
+</script>
+</body>
+</html>

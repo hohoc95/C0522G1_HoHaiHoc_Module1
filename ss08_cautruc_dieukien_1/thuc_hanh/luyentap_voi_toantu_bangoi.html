@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập với toán tử ba ngôi</title>
+</head>
+<body>
+<script>
+    let rank = prompt("Nhập vào (1 trong 3: Employee, Director,'',.....)");
+    let message = (rank == 'Employee') ? 'Hello' : (rank == 'Director') ? 'Greestings' : (rank == '') ? 'No login' : '';
+    alert(message);
+    // rank = '' không in ra là 'No login' mà in ra '', why ????????
+</script>
+</body>
+</html>
