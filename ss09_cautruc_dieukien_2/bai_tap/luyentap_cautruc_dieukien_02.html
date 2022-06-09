@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+<!--Bài 1: Chuyển từ độ C sang độ F.-->
+<!--°C  x  9/5 + 32 = °F-->
+<!--<script>-->
+<!--    let tempC= parseFloat(prompt('Nhập vào nhiệt độ C:'));-->
+<!--    let tempF;-->
+<!--    if (tempC % tempC == 0 ){-->
+<!--        tempF = tempC * 9/5 + 32;-->
+<!--        alert('Nhiệt độ F là: ' + tempF);-->
+<!--    }-->
+<!--    else {-->
+<!--        alert('Nhập lại nhiệt độ C bằng chữ số')-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 2: Chuyển từ mét sang feet:-->
+<!--ft =m * 3.2808-->
+
+<!--<script>-->
+<!--    let meter = parseFloat(prompt('Nhập vào mét:'));-->
+<!--    let feet;-->
+<!--    if(meter % meter == 0){-->
+<!--        feet = meter * 3.2808;-->
+<!--        alert('feet:' + feet);-->
+<!--    }-->
+<!--    else {-->
+<!--        alert('Nhập lại meter bằng chữ số')-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 3: Tính diện tích hình vuông khi biết cạnh a.-->
+
+<!--<script>-->
+<!--    let edgeSquare = parseFloat(prompt('Nhập vào cạnh của hình vuông:'));-->
+<!--    let areaSquare;-->
+<!--    if (edgeSquare % edgeSquare == 0){-->
+<!--        areaSquare = edgeSquareSquare * edgeSquare;-->
+<!--        alert('Diện tích của hình vuông là ' + areaSquare)-->
+<!--    }-->
+<!--    else {-->
+<!--        alert('Nhập lại cạnh hinh vuông bằng chữ số')-->
+<!--    }-->
+<!--        -->
+<!--</script>-->
+
+<!--Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.-->
+<!--<script>-->
+<!--    let edgeLongsRectangle = parseFloat(prompt('Nhập vào chiều dài của hình chữ nhật:'));-->
+<!--    let edgeWidthRectangle = parseFloat(prompt('Nhập vào chiều rộng của hình chữ nhật:'));-->
+<!--    let areaRectangle;-->
+<!--    if (edgeLongsRectangle % edgeLongsRectangle == 0 && edgeWidthRectangle % edgeWidthRectangle == 0){-->
+<!--        areaRectangle = edgeLongsRectangle * edgeWidthRectangle;-->
+<!--        alert('Diện tích của hình chữ nhật là ' + areaRectangle)-->
+<!--    }-->
+<!--    else {-->
+<!--        alert('Nhập lại các cạnh hinh chữ nhật bằng chữ số')-->
+<!--    }-->
+
+<!--</script>-->
+
+<!--Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.-->
+<!--<script>-->
+<!--    let edgeTriangle1 = parseFloat(prompt('Nhập vào cạnh thứ nhất của tam giác'));-->
+<!--    let edgeTriangle2 = parseFloat(prompt('nhập vào cạnh thứ hai của tam giác'));-->
+<!--    let areaTriangle;-->
+<!--    if(edgeTriangle1 % edgeTriangle1 == 0 && edgeTriangle2 % edgeTriangle2 == 0){-->
+<!--        areaTriangle = edgeTriangle1 * edgeTriangle2 * 0.5;-->
+<!--        alert('Diện tích tam giác vuông là ' + areaTriangle);-->
+<!--    }-->
+<!--    else {-->
+<!--        alert('Nhập lại cạnh của tam giác bằng chữ số');-->
+<!--    }-->
+
+<!--</script>-->
+
+<!--Bài 6: Giải phương trình bậc 1.-->
+<!--<script>-->
+<!--    // Phương trình bậc 1: ax + b = 0-->
+<!--    let a = parseFloat(prompt('Nhập vào hệ số a')); // hệ số a.-->
+<!--    let b = parseFloat(prompt('Nhập vào hệ số b')); // hệ số b.-->
+<!--    let resultX; // result là nghiệm của phương trình.-->
+<!--    if (a == 0 & b == 0){-->
+<!--        alert('Phương trình có vô só nghiệm');-->
+<!--    }-->
+<!--    else if (a == 0 & b != 0){-->
+<!--        alert('Phương trình vô nghiệm');-->
+<!--    }-->
+<!--    else {-->
+<!--        resultX = -b/a;-->
+<!--        alert('Nghiệm của phương trình là :' + resultX)-->
+<!--    }-->
+<!--</script>-->
+<!--Bài 7: Giải phương trình bậc 2.-->
+<!--<script>-->
+<!--    // Phương trình bậc 2 là ax2 + bx + c =0-->
+<!--    let a = parseFloat(prompt('Nhập hệ số a:'));-->
+<!--    let b = parseFloat(prompt('Nhập hệ só b:'));-->
+<!--    let c = parseFloat(prompt('Nhập hệ só c:'));-->
+<!--    let result1;-->
+<!--    let result2;-->
+<!--    if(a != 0){-->
+
+<!--        let delta = b*b -4*a*c;-->
+<!--        if (delta > 0){-->
+<!--            result1 = (-b + sqrt(delta))/a;-->
+<!--            result2 = (-b - sqrt(delta))/a;-->
+<!--            alert('Phương trình có 2 nghiệm là: ' + result1 + result2);-->
+<!--        }-->
+<!--        else if(delta = 0){-->
+<!--            result1 = -b/(2*a);-->
+<!--            alert('Phương trình có nghiệm kép là' + result1)-->
+<!--         }-->
+<!--        else {-->
+<!--            alert('Phương trình vô nghiệm')-->
+<!--        }-->
+<!--    }-->
+<!--    else {-->
+<!--        alert('Nhập lại, a phải khác 0')-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không.
+    Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.
+    if  0 < tuổi < 120
+    -->
+<!--<script>-->
+<!--    let ageHuman = parseFloat(prompt('Nhập vào số tuổi'));-->
+<!--    if(ageHuman % 1 == 0){-->
+<!--         if( ageHuman > 0 && ageHuman < 120){-->
+<!--                alert('Đây là tuổi người')-->
+<!--            }-->
+<!--         else{-->
+<!--             alert('Đây không phải là tuổi người')-->
+<!--         }-->
+<!--    }-->
+<!--    else {-->
+<!--        alert('Nhập lại tuổi bằng số nguyên')-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác.
+ Điều kiện để a,b,c là cạnh của một tam giác là:-->
+
+<!--a,b,c > 0-->
+<!--a + b > c-->
+<!--b + c > a-->
+<!--a + c > b-->
+<!--<script>-->
+<!--    let edgeA = parseFloat(prompt('Nhập vào cạnh a'));-->
+<!--    let edgeB = parseFloat(prompt('Nhập vào cạnh b'));-->
+<!--    let edgeC = parseFloat(prompt('Nhập vào cạnh c'));-->
+<!--    if(a > 0 && b > 0 && c > 0){-->
+<!--        if (a + b > c){-->
+<!--            alert('Đây là các cạnh của tam giác');-->
+<!--        }-->
+<!--        else if (a + c > b){-->
+<!--            alert('Đây là các cạnh của tam giác');-->
+<!--        }-->
+<!--        else if (b + c > a)-->
+<!--            alert('Đây là các cạnh của tam giác');-->
+<!--    }-->
+<!--    else {-->
+<!--        alert('Đây không phải là các cạnh của tam giác');-->
+<!--    }-->
+<!--</script>-->
+<!--Bài 10: Viết chương trình tính giá điện.
+Người dùng nhập vào số kwh điện
+Bậc 1: Cho kWh từ 0 - 50	:1.678
+Bậc 2: Cho kWh từ 51 - 100	:1.734
+Bậc 3: Cho kWh từ 101 - 200	:2.014
+Bậc 4: Cho kWh từ 201 - 300	:2.536
+-->
+<!--<script>-->
+<!--    let valueElcetric = parseFloat(prompt('Nhâp vào số kmh:'));-->
+<!--    let billElectric;-->
+<!--    if (valueElcetric >300){-->
+<!--        billElectric = (valueElcetric -300) * 2536 + (300 -201) * 2536 + (200 -101) * 2014 + (100 -51) * 1734 + 50 * 1678;-->
+<!--        alert('Giá điện là: ' + billElectric + ' đồng.')-->
+<!--    }-->
+<!--    else if (valueElcetric > 200){-->
+<!--        billElectric = (valueElcetric -201) * 2536 + (200 -101) * 2014 + (100 -51) * 1734 + 50 * 1678;-->
+<!--        alert('Giá điện là: ' + billElectric + ' đồng.')-->
+<!--    }-->
+<!--    else if (valueElcetric >100){-->
+<!--        billElectric = (valueElcetric - 101) * 2014 + (100 - 51) * 1734 + 50 * 1678;-->
+<!--        alert('Giá điện là: ' + billElectric + ' đồng.')-->
+<!--    }-->
+<!--    else if (valueElcetric > 50){-->
+<!--        billElectric = (valueElcetric - 51) * 1734 + 50 * 1678;-->
+<!--        alert('Giá điện là: ' + billElectric + ' đồng.')-->
+<!--    }-->
+<!--    else {-->
+<!--        billElectric = valueElcetric * 1678;-->
+<!--        alert('Giá điện là: ' + billElectric + ' đồng.')-->
+<!--    }-->
+<!--</script>-->
+
+
+<!--Bài 11: Viết chương trình tính thuế thu nhập cá nhân.-->
+<!--<script>-->
+<!--    let incomePersonal = parseFloat(prompt('Nhập vào thu nhập cá nhân (đơn vị triueej)'));-->
+<!--    let taxPersonal;-->
+<!--    if(incomePersonal <= 5){-->
+<!--        taxPersonal = incomePersonal*0.05;-->
+<!--    }-->
+<!--    else if(incomePersonal <= 10){-->
+<!--        taxPersonal = incomePersonal*0.1;-->
+<!--    }-->
+<!--    else if(incomePersonal <= 18){-->
+<!--        taxPersonal = incomePersonal*0.15;-->
+<!--    }-->
+<!--    else if(incomePersonal <= 32){-->
+<!--        taxPersonal = incomePersonal*0.2;-->
+<!--    }-->
+<!--    else if(incomePersonal <= 52){-->
+<!--        taxPersonal = incomePersonal*0.25;-->
+<!--    }-->
+<!--    else if(incomePersonal <= 80){-->
+<!--        taxPersonal = incomePersonal*0.3;-->
+<!--    }-->
+<!--    else {-->
+<!--        taxPersonal = incomePersonal*0.35;-->
+<!--    }-->
+<!--</script>-->
+
+
+<!--Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu,
+ số tháng cho vay và lãi xuất hàng tháng.-->
+<!--<script>-->
+<!--    let bankLoan = parseFloat(prompt('Nhập vào số tiền ban đầu:'));-->
+<!--    let monthsOfBorrowed = parseFloat(prompt('Nhập vào số tháng vay:'));-->
+<!--    let bankInterestRate = parseFloat(prompt('Nhập vào lãi suất:'));-->
+<!--    let bankInterest; // tiền lãi phải trả-->
+<!--    if(monthsOfBorrowed < 6){-->
+<!--        bankInterest = bankLoan + monthsOfBorrowed * bankInterestRate;-->
+<!--        alert('Tiền lãi phải trả là:' + bankInterest);-->
+<!--    }-->
+<!--    else if (monthsOfBorrowed < 12){-->
+<!--        bankInterest = bankLoan + monthsOfBorrowed * bankInterestRate;-->
+<!--        alert('Tiền lãi phải trả là:' + bankInterest);-->
+<!--    }-->
+<!--    else if (monthsOfBorrowed < 18){-->
+<!--        bankInterest = bankLoan + monthsOfBorrowed * bankInterestRate;-->
+<!--        alert('Tiền lãi phải trả là:' + bankInterest);-->
+<!--    }-->
+<!--    else {-->
+<!--        bankInterest = bankLoan + monthsOfBorrowed * bankInterestRate;-->
+<!--        alert('Tiền lãi phải trả là:' + bankInterest);-->
+
+<!--    }-->
+<!--    // let monthCaseA = ;-->
+<!--    // let monthCaseB;-->
+<!--    // let monthCaseC;-->
+<!--    // let monthCaseD;-->
+<!--    // let monthCaseE;-->
+<!--    // switch (true)-->
+<!--    //-->
+<!--    //-->
+
+<!--</script>-->
+</body>
+</html>

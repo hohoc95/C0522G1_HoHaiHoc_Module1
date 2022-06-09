@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ-->
+<script>
+    let exam5MinA = parseFloat(prompt('Nhập vào điểm kiểm tra 5 phút lần 1'));
+    let exam5MinB = parseFloat(prompt('Nhập vào điểm kiểm tra 5 phút lần 2'));
+    let exam5MinC = parseFloat(prompt('Nhập vào điểm kiểm tra 5 phút lần 3'));
+    let exam45MinA = parseFloat(prompt('Nhập vào điểm kiểm tra giữa kỳ lần 1'));
+    let exam45MinB = parseFloat(prompt('Nhập vào điểm kiểm tra giữa kỳ lần 2'));
+    let exam90Min = parseFloat(prompt('Nhập vào điểm kiểm tra cuối '));
+    let totalExam = exam5MinA + exam5MinB + exam5MinC + exam45MinA*2 + exam45MinB*2 + exam90Min*3;
+    let average = totalExam / 10;
+    if(average >= 8.0){
+        alert('Học sinh có điểm trung bình là ' + average + ' đạt loại giỏi');
+    }
+    else if (average >= 6.5){
+        alert('Học sinh có điểm trung bình là ' + average + ' đạt loại khá');
+    }
+    else if(average >= 5){
+        alert('Học sinh có điểm trung bình là ' + average + ' đạt loại trung bình');
+    }
+    else {
+        alert('Học sinh có điểm trung bình là ' + average + ' đạt loại yếu')
+    }
+</script>
+
+</body>
+</html>

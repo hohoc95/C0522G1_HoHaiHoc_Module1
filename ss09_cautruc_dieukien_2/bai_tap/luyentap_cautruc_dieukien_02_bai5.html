@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.-->
+<script>
+    let edgeTriangle1 = parseFloat(prompt('Nhập vào cạnh thứ nhất của tam giác'));
+    let edgeTriangle2 = parseFloat(prompt('nhập vào cạnh thứ hai của tam giác'));
+    let areaTriangle;
+    if(edgeTriangle1 % edgeTriangle1 == 0 && edgeTriangle2 % edgeTriangle2 == 0){
+        areaTriangle = edgeTriangle1 * edgeTriangle2 * 0.5;
+        alert('Diện tích tam giác vuông là ' + areaTriangle);
+    }
+    else {
+        alert('Nhập lại cạnh của tam giác bằng chữ số');
+    }
+
+</script>
+</body>
+</html>

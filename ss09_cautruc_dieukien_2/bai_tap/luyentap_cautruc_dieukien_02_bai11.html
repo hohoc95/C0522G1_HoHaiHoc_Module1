@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 11: Viết chương trình tính thuế thu nhập cá nhân.-->
+<script>
+    let incomePersonal = parseFloat(prompt('Nhập vào thu nhập cá nhân (đơn vị triueej)'));
+    let taxPersonal;
+    if(incomePersonal <= 5){
+        taxPersonal = incomePersonal*0.05;
+    }
+    else if(incomePersonal <= 10){
+        taxPersonal = incomePersonal*0.1;
+    }
+    else if(incomePersonal <= 18){
+        taxPersonal = incomePersonal*0.15;
+    }
+    else if(incomePersonal <= 32){
+        taxPersonal = incomePersonal*0.2;
+    }
+    else if(incomePersonal <= 52){
+        taxPersonal = incomePersonal*0.25;
+    }
+    else if(incomePersonal <= 80){
+        taxPersonal = incomePersonal*0.3;
+    }
+    else {
+        taxPersonal = incomePersonal*0.35;
+    }
+</script>
+</body>
+</html>

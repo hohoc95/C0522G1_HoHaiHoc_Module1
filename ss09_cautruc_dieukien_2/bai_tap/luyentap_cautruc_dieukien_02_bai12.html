@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu,
+ số tháng cho vay và lãi xuất hàng tháng.-->
+<script>
+    let bankLoan = parseFloat(prompt('Nhập vào số tiền ban đầu:'));
+    let monthsOfBorrowed = parseFloat(prompt('Nhập vào số tháng vay:'));
+    let bankInterestRate = parseFloat(prompt('Nhập vào lãi suất:'));
+    let bankInterest; // tiền lãi phải trả
+    if(monthsOfBorrowed < 6){
+        bankInterest = bankLoan + monthsOfBorrowed * bankInterestRate;
+        alert('Tiền lãi phải trả là:' + bankInterest);
+    }
+    else if (monthsOfBorrowed < 12){
+        bankInterest = bankLoan + monthsOfBorrowed * bankInterestRate;
+        alert('Tiền lãi phải trả là:' + bankInterest);
+    }
+    else if (monthsOfBorrowed < 18){
+        bankInterest = bankLoan + monthsOfBorrowed * bankInterestRate;
+        alert('Tiền lãi phải trả là:' + bankInterest);
+    }
+    else {
+        bankInterest = bankLoan + monthsOfBorrowed * bankInterestRate;
+        alert('Tiền lãi phải trả là:' + bankInterest);
+    }
+</script>
+</body>
+</html>

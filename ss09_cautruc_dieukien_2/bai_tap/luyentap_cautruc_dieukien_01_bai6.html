@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng-->
+<!--Mức hoa hồng được nhận-->
+<script>
+    let revenueSales = parseFloat(prompt('Nhập vào doanh thu bán hàng (đơn vị triệu đồng)'));
+    let commission; //tiền hoa hồng;
+    if (revenueSales < 5 ){
+        commission = revenueSales * 0.05;
+        alert('Tiền hoa hồng: ' + commission);
+    }
+    else if (revenueSales < 10 ){
+        commission = revenueSales * 0.1;
+        alert('Tiền hoa hồng: ' + commission);
+    }
+    else if (revenueSales < 15 ){
+        commission = revenueSales * 0.15;
+        alert('Tiền hoa hồng: ' + commission);
+    }
+    else {
+        commission = revenueSales * 0.2;
+        alert('Tiền hoa hồng: ' + commission);
+    }
+
+</script>
+</body>
+</html>
