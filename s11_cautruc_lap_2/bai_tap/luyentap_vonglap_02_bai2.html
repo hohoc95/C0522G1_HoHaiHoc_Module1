@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //n! = n*(n-1)!
+    let inputNumber = parseFloat(prompt('Nhập vào một số để in ra giai thừa:'));
+    let facetorial = 1;
+    for (let i = 1; i <= inputNumber ; i++){
+        facetorial = facetorial*i;
+    }
+    document.write('!' + inputNumber + ' = ' +facetorial);
+
+</script>
+</body>
+</html>

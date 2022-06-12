@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button onclick="createNumberRandom()">Bắt đầu</button>
+    <script>
+        function createNumberRandom() {
+            let minRangeNumber = parseInt(prompt("Khoảng nhỏ nhất mà bạn muốn chơi? "));
+            let maxRangeNumber = parseInt(prompt("Khoảng lớn nhất mà bạn muốn chơi? "));
+            let randomNumber = Math.floor(Math.random() * (maxRangeNumber - minRangeNumber + 1)) + minRangeNumber;
+            alert('Lộ đáp án ' + randomNumber); // dùng để test chương trình
+            let count = 0; //count là số lần dự đoán
+            let number;
+
+            for (; number != randomNumber; count++) {
+
+                number = parseInt(prompt("Nhập số bạn đoán: "));
+                if (count == 4) {
+                    alert("Bạn đã hết số lần đoán!");
+                    break;
+                } else if (number > randomNumber) {
+                    alert("Số bạn đoán lớn hơn đáp án!");
+                } else if (number < randomNumber) {
+                    alert("Số bạn đoán nhỏ hơn đáp án!");
+
+                }
+            }
+            // In ra kết quả
+            if (count == 4) {
+                document.write('Gameover');
+            } else {
+                document.write('Bạn đã đoán đúng, muốn chơi lại thì nhấn F5.');
+            }
+        }
+    </script>
+</body>
+</html>

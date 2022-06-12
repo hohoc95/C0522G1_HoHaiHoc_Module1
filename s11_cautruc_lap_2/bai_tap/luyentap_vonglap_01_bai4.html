@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.
+    let seed1 = 0;
+    let seed2 = 1;
+    let seed3;
+    for(let i = 1; i <= 50; i++){
+        seed3 = seed1 + seed2;
+        seed1 = seed2;
+        seed2 = seed3;
+        if( seed3 % 5 == 0){
+            document.write(seed3 + '<br>');
+            break;
+        }
+    }
+</script>
+</body>
+</html>

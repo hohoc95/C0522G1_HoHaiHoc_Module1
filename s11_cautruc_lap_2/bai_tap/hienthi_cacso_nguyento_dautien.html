@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt('Nhập vào số lượng SNT'));
+    let count = 0; // tổng số nguyên tố hiện tại
+    let countDivisor = 0; // số  ước của số i(thời điểm hiện tại)
+    for (let i = 2; i < 1000; i++) {
+        if (count < number) {
+            for (let j = 1; j <= i; j++) {
+                if (i % j == 0) {
+                    countDivisor += 1;
+                }
+            }
+            if (countDivisor == 2) {
+                document.write(i + "<br>");
+                count += 1;
+            }
+            countDivisor = 0;
+        } else {
+            break;
+        }
+
+    }
+</script>
+</body>
+</html>
