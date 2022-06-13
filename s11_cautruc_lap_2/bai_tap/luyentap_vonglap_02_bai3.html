@@ -6,13 +6,13 @@
 </head>
 <body>
     <script>
-        Bài 3.1
-        for(let i = 1 ; i <= 5 ; i++){
-            for(let j = 1; j <= i ; j++){
-                document.write('*');
-            }
-            document.write('<br>');
-        }
+        // 3.1
+        // for(let i = 1 ; i <= 5 ; i++){
+        //     for(let j = 1; j <= i ; j++){
+        //         document.write('*');
+        //     }
+        //     document.write('<br>');
+        // }
 
         //Bài 3.2
         // for(let i = 1 ; i <= 5 ; i++){
@@ -32,21 +32,21 @@
 
 
         //3.3
-        // let triangle = "<table>";
-        // for (let i=1; i<=5; i++) {
-        //     triangle += "<tr>";
-        //     for (let j=1; j<=5; j++) {
-        //         if (j<=5-i) {
-        //             triangle += "<td>" + "</td>";
-        //         }
-        //         else {
-        //             triangle += "<td>" + "*" + "</td>";
-        //         }
-        //     }
-        //     triangle += "</tr>";
-        // }
-        // triangle += "</table>";
-        // document.write(triangle);
+        let triangle = "<table>";
+        for (let i=1; i<=5; i++) {
+            triangle += "<tr>";
+            for (let j=1; j<=5; j++) {
+                if (j<=5-i) {
+                    triangle += "<td>" + "</td>";
+                }
+                else {
+                    triangle += "<td>" + "*" + "</td>";
+                }
+            }
+            triangle += "</tr>";
+        }
+        triangle += "</table>";
+        document.write(triangle);
 
         //3.4
         // let triangle4 = "<table>";
