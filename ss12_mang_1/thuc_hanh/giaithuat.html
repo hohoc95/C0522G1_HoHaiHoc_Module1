@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //Bài 1 1.	Viết chương trình in ra các dấu * theo cấu trúc như sau
+        // (cho n là chiều cao của tháp, cần in ra n dòng):
+
+        // let heightTown = parseInt(prompt('Nhập vào chiều cao của tháp:'))
+        // for (let i = 1; i <= heightTown ; i++){
+        //     for (let j = 1; j <= 5; j++){
+        //         document.write('*')
+        //     }
+        //     document.write('<br>');
+        // }
+
+        //Bài 2	Nhập vào tháng, năm bất kỳ. In ra số ngày tương ứng với tháng, năm đó
+
+        // let month = parseInt(prompt('Nhập vào tháng:'));
+        // let year  = parseInt(prompt('Nhập vào năm'));
+
+        //Bài 3.	Viết chương trình tính S=1+1/2+1/3+....+1/n
+
+        // let number = parseInt(prompt('Nhập vào n:'));
+        // let sum = 0;
+        // for (let i = 1; i <= number ; i++){
+        //     sum = sum + 1/i;
+        // }
+        // document.write(sum);
+
+        //Bài 4: Viết chương trình tính S=15-1+1/2-1/3!+....+(-1)n  1/n!
+
+        // let number = parseInt(prompt('Nhập vào n:'));
+        // let sum = 15;
+        // let factorial = 1;
+        // for (let i = 1; i <= number ; i++){
+        //     factorial *=i;
+        //     sum += Math.pow(-1, i)/factorial;
+        // }
+        // document.write(sum);
+
+        //Bài 5	Viết chương trình tính  S=1+1/3!+1/5!+…..+1/(2n-1)!
+        // let number = parseInt(prompt('Nhập vào n:'));
+        // let sum = 0;
+        // let factorial = 1;
+        // for (let i = 1; i <= 2 *number -1 ; i += 2){
+        //     factorial = factorial * i;
+        //     sum= sum + 1/factorial;
+        // }
+        // document.write(sum);
+
+        //Bài 6	Tính n! 	=	1*3*5*…..*n(n lẽ)
+        //                  =	2*4*6*….*n(n chẵn)
+
+        // let number = parseInt(prompt('Nhập vào n'));
+        // let factorial = 1 ;
+        // if (number % 2 == 0) {
+        //     for (let i = 2; i <= number; i = i + 2) {
+        //         factorial = factorial * i;
+        //     }
+        // }
+        // else {
+        //     for (let i = 1; i <= number; i = i + 2) {
+        //         factorial = factorial * i;
+        //     }
+        // }
+        // document.write(factorial);
+
+
+        //Bài 7	Tính tổng và tích các chữ số của một số nguyên dương m cho trước
+        //      (Ví dụ : m=234=> S=2+3+4=9, P=2*3*4=24)
+        // let number = parseInt(prompt('Nhập một số'));
+        // let sum = 0;
+        // let product = 1;
+        // while (number > 0)
+        // {
+        //     sum += number % 10;
+        //     product *= number % 10;
+        //     number = Math.floor(number / 10);
+        // }
+        // document.write('Tổng là ' + sum + '<br>');
+        // document.write('Tích là ' + product);
+
+        //Bài 8	Nhập 2 số nguyên dương a và b.
+        // Sau đó in ra ước chung lớn nhất và bội chung nhỏ nhất của 2 số nguyên dương a và b đó.
+        let numberA =parseInt(prompt('Nhập vào só A:'))
+        let numberB =parseInt(prompt('Nhập vào só B:'))
+        for (let i = numberA; i >= 1 ; i--){
+            if(numberA % i === 0 && numberB % i === 0 ){
+                document.write('Ước chung lớn nhất của A và B là: ' + i +'<br>')
+                break;
+            }
+        }
+        for (let i = numberA; i < numberA * numberB ; i ++){
+            if( i % numberA === 0 && i % numberB === 0){
+                document.write('Bội chung nhỏ nhất của A và B là: ' + i)
+                break;
+            }
+        }
+
+    </script>
+</body>
+</html>
