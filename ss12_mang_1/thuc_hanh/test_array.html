@@ -5,11 +5,26 @@
     <title>Test Array</title>
 </head>
 <body>
+    <input type="text" id="txtValue"/>
+    <input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"/>
+    <input type="button" id="btnDisplay" value="Display" onclick="display_array();"/>
+    <div id="result"></div>
+
     <script>
-        let arr =['A','B','C'];
-        let arr1 = new Array('D','E','F');
-        document.write(arr + '<br>');
-        document.write(arr1);
+        let x = 0;
+        let array = Array();
+        function add_element_to_array() {
+            array[x] = document.getElementById('txtValue').value;
+            x++;
+            document.getElementById('txtValue').value = '';
+        }
+        function display_array() {
+            let e = '<hr/v>';
+            for (let i = 0; i < array.length; i++){
+                e += 'Element ' + i + '=' + array[i] + '<br/>';
+            }
+            document.getElementById('result').innerHTML = e
+        }
     </script>
 </body>
 </html>

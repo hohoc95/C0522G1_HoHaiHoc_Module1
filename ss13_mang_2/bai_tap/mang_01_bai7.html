@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử,
+    //                                                             nhập/tạo phần tử số nguyên V.
+    // Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng
+    // (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V,
+    //                                                      và gán 0 cho phần tử cuối cùng của mảng)
+
+    //Cách 1 (chưa đúng vì undefined, null hay chuỗi rỗng '' đều vần còn ',' ở kết quả)
+    let arrayNumbers = [];
+    let numberV = parseInt(prompt('Nhập vào số nguyên V:'));
+    let count = 0;
+    for(let i = 0 ; i < 10 ; i++){
+        arrayNumbers[i] = parseInt(prompt('Nhập số nguyên vào mảng'))
+    }
+    for(let i = 0 ; i < 10 ; i++){
+        if( numberV == arrayNumbers[i]){
+            arrayNumbers[i] = undefined; // tức quá
+           count++;
+        }
+    }
+    for(let i =0; i < count ; i++){
+        arrayNumbers.push(0);
+    }
+    document.write(numberV + '<br>');
+    document.write(arrayNumbers);
+
+    //Cách 2 dùng thuật toán fibonacci (chưa hoàn thiện).
+
+    // let arrayNumbers = [];
+    // let numberV = parseInt(prompt('Nhập vào số nguyên V:'));
+    // let count = 0;
+    // for(let i = 0 ; i < 10 ; i++){
+    //     arrayNumbers[i] = parseInt(prompt('Nhập số nguyên vào mảng'))
+    // }
+    // for(let i = 0 ; i < 10 ; i++){
+    //     if( numberV == arrayNumbers[i]){
+    //         count++;
+    //         while(i < 9){
+    //             let seed1 = arrayNumbers[i];
+    //             arrayNumbers[i] = arrayNumbers[i + 1];
+    //             arrayNumbers[i + 1] = seed1;
+    //             i++;
+    //         }
+    //         arrayNumbers.pop();
+    //     }
+
+    // }
+    // document.write(numberV + '<br>');
+    // document.write(arrayNumbers);
+</script>
+</body>
+</html>

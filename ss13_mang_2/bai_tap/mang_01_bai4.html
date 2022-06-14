@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.
+
+        let arrayNumbers = [];
+        let iverseNumbers = [];
+        for(i = 0 ; i < 5 ; i++){
+            arrayNumbers[i] = parseInt(prompt('Nhập vào số:'));
+
+        }
+        // Cách 1: sử dụng push
+        // for( i = arrayNumbers.length - 1; i >=0 ; i-- ){
+        //         iverseNumbers.push(arrayNumbers[i]) ;
+        //     }
+        // for( i = arrayNumbers.length - 1; i >=0 ; i-- ){
+        //         iverseNumbers[i] = arrayNumbers.pop(); //Không đảo ngược được do [i] = 5 và i--.
+        // }
+
+        // Cách 2: sử dụng shift
+            for( i = arrayNumbers.length - 1; i >=0 ; i-- ){
+                iverseNumbers[i] = arrayNumbers.shift();
+        }
+
+        document.write('Mảng đã nhập ' + arrayNumbers + '<br>');
+        document.write('Mảng đảo ngược là: ' + iverseNumbers);
+    </script>
+</body>
+</html>
