@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<input type="text" id="English">
+<input type="button" value="Trans" id="Vietnamese" onclick="translated()"/>
+<p id="result"></p>
+<script>
+    function translated() {
+        let string = document.getElementById('English').value;
+        let arrayEnglish = ['she', 'is', 'love', 'she', 'is', 'life'];
+        let arrayVietnamese = ['cô ấy', 'là', 'tình yêu', 'cô ấy', 'là', 'cuộc sống'];
+        for (let i = 0; i < arrayEnglish.length; i++) {
+            if (string === arrayEnglish[i]) {
+                for (let j = 0; j < arrayVietnamese.length; j++) {
+                    if (i===j) {
+                        result = arrayEnglish[i] + ": " + arrayVietnamese[j]
+                    }
+                }
+            }
+        }
+        document.getElementById('result').innerText = result;
+    }
+
+</script>
+</body>
+</html>

@@ -11,18 +11,21 @@
         let inputString1 = prompt('Nhập vào chuỗi thứ nhất:');
         let inputString2 = prompt('Nhập vào chuỗi thứ hai:');
         let count = 0
-        if(inputString1.length == inputString2.length){
-            for (i = 0 ; i < inputString1.length ; i++){
-                if(inputString1[i] == inputString2[i]){
-                    count ++;
-
-
+        if(inputString1.length == inputString2.length) {
+            for (i = 0; i < inputString1.length; i++) {
+                if (inputString1[i] == inputString2[i]) {
+                    count++;
+                }
             }
-        else {
-            document.write('Hai chuỗi đã nhập không giống nhau');
+            if (count === inputString1.length) {
+                document.write('hai chuỗi giống nhau');
+            } else {
+                document.write('hai chuỗi không giống nhau');
+            }
         }
-
-                document.write('Hai chuỗi đã nhập không giống nhau');
+        else {
+            document.write('hai chuỗi không giống nhau');
+        }
 
     </script>
 </body>
