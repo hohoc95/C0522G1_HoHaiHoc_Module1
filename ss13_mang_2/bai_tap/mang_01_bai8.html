@@ -10,13 +10,13 @@
         //      Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.
 
         let arrayNumbers = [];
-        for(let i = 0 ; i < 10 ; i ++){
+        for(let i = 0 ; i < 5 ; i ++){
             arrayNumbers[i] = parseInt(prompt('Nhập số nguyên vào mảng :'));
         }
         //fibonacci
         let seed1 = 0;
-        for(let i = 0 ; i < 10 ; i ++){
-            for(let j = 0 ; j < i ; j++){
+        for(let i = 0 ; i < 5 ; i ++){
+            for(let j = 0; j <= i ; j++){
                 if(arrayNumbers[i] > arrayNumbers[j]){
                     seed1 = arrayNumbers[i] ;
                     arrayNumbers[i] = arrayNumbers [j];

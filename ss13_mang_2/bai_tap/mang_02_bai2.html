@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược.
+        // Ví dụ, nếu một mảng chứa các ký tự  [ 'c', 's', 'c', '2', '6', '1' ]
+        //                                              sau khi thực hiện đảo ngược sẽ là "162csc"
+
+
+        let arrayNumbers = [];
+        let iverseNumbers = [];
+        for(i = 0 ; i < 5 ; i++){
+            arrayNumbers[i] = (prompt('Nhập vào phần tử của mảng:'));
+
+        }
+        //Cách 1: sử dụng shift
+        for( i = arrayNumbers.length - 1; i >=0 ; i-- ){
+                iverseNumbers[i] = arrayNumbers.shift();
+        }
+        //Nếu ta sử dụng pop sẽ sao chép arrayNumbers chứ không đảo ngược.
+        document.write(iverseNumbers);
+
+
+    </script>
+</body>
+</html>

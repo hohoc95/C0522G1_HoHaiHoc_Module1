@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //Bài 6: Viết chương trình nhập vào một mảng ký tự,
+        // tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )
+        let inputArray = [];
+        for(let i = 0 ; i < 5 ; i++ ) {
+            inputArray[i] = prompt('Nhập vào mảng:');
+        }
+
+        for (let i = 0 ; i < inputArray.length ; i++){
+            if ( inputArray[i] == '-'){
+                inputArray[i] = '_';
+            }
+        }
+        document.write(inputArray);
+    </script>
+</body>
+</html>

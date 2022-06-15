@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //Bài 4: Viết một chương trình để đếm số từ trong một chuỗi
+        // let a= 'ssaddsasadđsadfsfdsf';
+        // b =a.split(); // chuyen chuỗi thành mảng
+        // document.write(typeof b);
+
+        let inputString = prompt('Nhập vào chuỗi');
+        let count = 0 ;
+        for (i =0 ; i < inputString.length ; i++){
+            if (inputString[i] != ' ' && inputString[i+1] == ' ') {
+                count ++;
+            }
+        }
+        if (inputString[inputString.length - 1] != ' '){
+            count+= 1;
+        }
+        document.write('count: ' + count + '<br>');
+        document.write(inputString + '<br>');
+    </script>
+</body>
+</html>
