@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+        let arrayNumbers = [];
+        for (let i = 0; i < 5; i++) {
+            arrayNumbers[i] = prompt('Nhập vào mảng số nguyên:');
+        }
+        let inveseNumbers = [];
+        let result = [];
+
+        function inveseArray(arrayNumbers) {
+            for (i = arrayNumbers.length - 1; i >= 0; i--) {
+                inveseNumbers[i] = arrayNumbers.shift();
+            }
+            return inveseNumbers;
+        }
+        result = inveseArray(arrayNumbers);
+        document.write(result);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không.
+        // Nếu là ký tự số hàm trả về true, ngược lại trả về false.
+
+        let inputUser = parseInt(prompt('Hãy nhập vào một ký tự'));
+        //document.write(typeof inputUser);
+        let result;
+        function checkInput(inputUser) {
+            if(inputUser % inputUser == 0 ){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        result = checkInput(inputUser);
+        document.write(result);
+
+    </script>
+</body>
+</html>

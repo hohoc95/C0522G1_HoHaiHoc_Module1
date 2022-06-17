@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
+
+        function convert(array) {
+            let temp = array[0];
+            array[0] = array[1];
+            array[1] = temp;
+            return array
+        }
+        let numberA = parseInt(prompt('Nhập vào số nguyên thứ nhất:'));
+        let numberB = parseInt(prompt('Nhập vào số nguyên thứ hai:'));
+        let array = [numberA, numberB];
+        convert(numberA, numberB)
+        document.write(convert(array) + "<br>");
+        document.write(convert(array) + "<br>");
+    </script>
+</body>
+</html>

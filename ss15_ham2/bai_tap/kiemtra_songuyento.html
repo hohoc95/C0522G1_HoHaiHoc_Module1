@@ -10,8 +10,8 @@
         let number = parseInt(prompt("Nhập số cần check "));
         isPrime(number)
 
-        function isPrime(number) {
-            let count = 0; // đếm số ước của số đang check
+        function checkPrime(number) {
+            let count = 0; //
             let isPrime = false;
             if (number == 0) {
                 alert(number + " không là số nguyên tố")
@@ -21,7 +21,6 @@
                         count += 1;
                     }
                 }
-
                 if (count == 2) {
                     isPrime = true
                 }
