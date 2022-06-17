@@ -8,29 +8,26 @@
 <!-- [Bài tập] Hàm kiểm tra số nguyên tố -->
     <script>
         let number = parseInt(prompt("Nhập số cần check "));
-        isPrime(number)
-
         function checkPrime(number) {
-            let count = 0; //
-            let isPrime = false;
+            let count = 0;
             if (number == 0) {
-                alert(number + " không là số nguyên tố")
+                document.write(number + " không là số nguyên tố");
             } else {
                 for (let i = 1; i <= number; i++) {
                     if (number % i == 0) {
-                        count += 1;
+                        count ++;
                     }
                 }
                 if (count == 2) {
-                    isPrime = true
+                    return document.write(number + " là số nguyên tố");
                 }
-                if (isPrime) {
-                    alert(number + " là số nguyên tố")
-                } else {
-                    alert(number + " không là số nguyên tố")
+                else {
+                    return document.write(number + " không là số nguyên tố");
                 }
             }
         }
+        let result = checkPrime(number);
+        document.write(checked);
     </script>
 </body>
 </html>
