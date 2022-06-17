@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Function</title>
+</head>
+<body>
+    <script>
+        // //Viết hàm tính tổng hai số nguyên
+        // function tinhTong (a, b) {
+        //     return a + b;
+        // }
+        //
+        // var a = parseInt(prompt('Nhập vào số nguyên thứ nhất: '));
+        // var b = parseInt(prompt('Nhập vào số nguyên thứ hai: '));
+        //
+        // var sum = tinhTong(a , b);
+        //
+        // document.write('Tổng của 2 số nguyên là: ' + sum);
+
+        //Nếu không có return
+        // function tinhTong() {
+        //     var a = parseInt(prompt('Nhập vào số nguyên thứ nhất: '));
+        //     var b = parseInt(prompt('Nhập vào số nguyên thứ hai: '));
+        //
+        //     var sum = tinhTong(a , b);
+        //
+        //     document.write('Tổng của 2 số nguyên là: ' + sum);
+        // }
+        // tinhTong();
+
+        // function showMessage() {
+        //     console.log('Message 1')
+        // }
+        // function showMessage() {
+        //     console.log('Message 2')
+        // }
+        // function showMessage() {
+        //     console.log('Message 3')
+        // }
+        // showMessage();
+        // in ra : Message3 (Message 3 đè lên Message 1 và Message 2)
+        //
+        // function  cong( a, b) {
+        //     return a + b;
+        //  }
+        // var result = cong(2 , 8);
+        // document.write(result)
+
+        // function showMessage() {
+        //
+        // }
+        // var  showMessage2 = function () {
+        //
+        // }
+
+        // Tính tổng các số lẻ trong mảng
+        var mang = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,17, 18, 19, 20];
+
+        function tong_so_le(mang) {
+            var tong = 0
+
+            for (var i = 0; i < mang.length; i++){
+                if (mang[i] % 2 != 0){
+                    tong += mang[i];
+                }
+            }
+            return tong;
+        }
+        document.write(tong_so_le(mang));
+
+    </script>
+</body>
+</html>

@@ -7,16 +7,26 @@
 <body>
 <!--Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.-->
 <script>
+    // let edgeLongsRectangle = parseFloat(prompt('Nhập vào chiều dài của hình chữ nhật:'));
+    // let edgeWidthRectangle = parseFloat(prompt('Nhập vào chiều rộng của hình chữ nhật:'));
+    // let areaRectangle;
+    // if (edgeLongsRectangle % edgeLongsRectangle == 0 && edgeWidthRectangle % edgeWidthRectangle == 0){
+    //     areaRectangle = edgeLongsRectangle * edgeWidthRectangle;
+    //     alert('Diện tích của hình chữ nhật là ' + areaRectangle)
+    // }
+    // else {
+    //     alert('Nhập lại các cạnh hinh chữ nhật bằng chữ số')
+    // }
+
+    //Kết hợp với function
+
     let edgeLongsRectangle = parseFloat(prompt('Nhập vào chiều dài của hình chữ nhật:'));
     let edgeWidthRectangle = parseFloat(prompt('Nhập vào chiều rộng của hình chữ nhật:'));
-    let areaRectangle;
-    if (edgeLongsRectangle % edgeLongsRectangle == 0 && edgeWidthRectangle % edgeWidthRectangle == 0){
-        areaRectangle = edgeLongsRectangle * edgeWidthRectangle;
-        alert('Diện tích của hình chữ nhật là ' + areaRectangle)
+    function areaRectangle(edgeLongsRectangle, edgeWidthRectangle) {
+        return edgeWidthRectangle * edgeLongsRectangle;
     }
-    else {
-        alert('Nhập lại các cạnh hinh chữ nhật bằng chữ số')
-    }
+    let area = areaRectangle(edgeLongsRectangle, edgeWidthRectangle);
+    document.write('Diện tích của hình chữ nhật là: ' + area);
 
 </script>
 

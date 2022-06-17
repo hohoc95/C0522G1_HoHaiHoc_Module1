@@ -7,14 +7,31 @@
 <body>
 <!--Bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không-->
 <script>
-    let numberA = parseFloat(prompt('Nhập vào số a:'));
-    let numberB = parseFloat(prompt('Nhập vào số b:'));
-    if (numberA % numberB == 0){
+    // let numberA = parseFloat(prompt('Nhập vào số a:'));
+    // let numberB = parseFloat(prompt('Nhập vào số b:'));
+    // if (numberA % numberB == 0){
+    //     alert('a chia hết cho b');
+    // }
+    // else {
+    //     alert('a không chia hết cho b');
+    // }
+    //
+
+
+    //Kết hợp function
+    let numberA = parseInt(prompt('Nhập vào số A'));
+    let numberB = parseInt(prompt('Nhập vào số B'));
+
+    function chiahet(numberA, numberB) {
+        return numberA % numberB ;
+    }
+    let result = chiahet(numberA, numberB);
+    if (result == 0) {
         alert('a chia hết cho b');
+    } else {
+        alert('a không chia hết cho b')
     }
-    else {
-        alert('a không chia hết cho b');
-    }
+    
 </script>
 </body>
 </html>

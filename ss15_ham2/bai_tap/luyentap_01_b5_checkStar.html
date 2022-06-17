@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Bài 5 -->
+    <script>
+        let secretStar = prompt('Nhập vào cái tên ngôi sao!!:');
+        let galaxy1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let galaxy2 = ['UrsaMinor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'UrsaMajor', 'Leo'];
+        let galaxy3;
+
+        function checkStar(secretStar) {
+            for (let i = 0; i < galaxy1.length; i++) {
+                if (secretStar === galaxy1[i]) {
+                    galaxy2.push(secretStar);
+                    break;
+                }
+            }
+            return galaxy2
+        }
+
+        galaxy2 = checkStar(secretStar);
+        if (galaxy2.length > 7) {
+            document.write(galaxy2 + '<br>');
+            //document.write(galaxy2[7]);
+        } else {
+            document.write('Không có ngôi sao này!')
+        }
+    </script>
+</body>
+</html>

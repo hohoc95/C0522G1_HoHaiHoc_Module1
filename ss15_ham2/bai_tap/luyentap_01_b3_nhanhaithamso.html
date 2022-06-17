@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Bài 3: Tạo hàm nhận vào hai tham số.
+    Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai,
+                                            hiển thị hộp thoại thông báo cho người dùng.
+    Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai,
+                                            trả về tổng của hai tham số. -->
+    <script>
+        let numberA = parseInt(prompt('Nhập vào số A'));
+        let numberB = parseInt(prompt('Nhập vào số B'));
+        let sum = 0;
+
+        function checkValue(numberA, numberB) {
+            if (numberA > numberB) {
+                alert('A > B');
+                return alert;
+            } else {
+                sum = numberA + numberB;
+                document.write('Tổng của hai số đã nhập là: ');
+                return sum;
+            }
+        }
+
+        let checked = checkValue(numberA, numberB);
+        document.write(checked);
+    </script>
+</body>
+</html>
