@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //5. Xây dựng 1 hàm nhận vào 1 mảng số nguyên và 1 số nguyên number bất kì.
+        // Hàm trả về 1 mảng thỏa mãn điều kiện sau:
+        // •Nếu number là số lẻ, thì tất cả số chẵn trong mảng sẽ tăng lên 1 đơn vị.
+        //      Ngược lại nếu number là số chẵn thì tất cả số lẻ trong mảng tăng lên 1 đơn vị.
+        //      Ngoài ra tất cả các số trong mảng trùng với number sẽ được đổi thành -1.
+        // Yêu cầu hiển thị ra màn hình: Mảng số nguyên trước khi thay đổi,
+        //                      số người dùng nhập vào và mảng sau khi thay đổi.
+
+        let array = [1,2,3,4,5,6,7,8,9];
+        document.write('Đây là mảng số nguyên trước khi thay đổi ' + array + '<br>');
+        let number = parseInt(prompt('Nhập một số nguyên:'));
+        document.write('Đây là số nguyên người dùng vừa nhập: ' + number + '<br>');
+        function changeNumber(array) {
+            if (number % 2 !== 0) {
+                for (let i = 0; i < array.length; i++) {
+                    if (array[i] % 2 === 0) {
+                        array[i] = array[i] + 1;
+                    }
+                }
+                document.write('Đây là mảng số nguyên đã thay đổi ' + array);
+            } else {
+                for (let i = 0; i < array.length; i++) {
+                    if (array[i] % 2 !== 0) {
+                        array[i] = array[i] + 1;
+                        if (array[i] === number) {
+                            array[i] = -1;
+                        }
+                    }
+                }
+                document.write('Đây là mảng số nguyên đã thay đổi ' + array);
+            }
+        }
+        changeNumber(array);
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // 6. Xây dựng 1 hàm nhận vào 2 mảng bất kì.
+        //    Nếu mảng thứ 2 là con của mảng thứ nhất thì trả về true, ngược lại trả về false. Ví dụ:
+        //     •Mảng thứ nhất [ 1, 2, 3, 4 ] mảng thứ 2 [2, 3] => true.
+        //     •Mảng thứ nhất [ 1, 2, 3, 4 ] mảng thứ 2 [3, 2] => false.
+        //[5,7,3,6,1]
+        //[5,6]
+        //[6,5]
+
+        //tạo mảng
+        let arrayA =[];
+        for(let i = 0; i < 5; i++){
+            arrayA[i] = parseInt(prompt('Nhập số vào mảng:'));
+        }
+        document.write(arrayA + '<br>');
+        let arrayB =[];
+        for(let i = 0; i < 3; i++){
+            arrayB[i] = parseInt(prompt('Nhập số vào mảng:'));
+        }
+        document.write(arrayB + '<br>');
+
+        //duyệt mảng và so sánh
+        for (let i = 0; i < arrayA.length; i ++){
+            for (let j = 0; j < arrayB.length; i++){
+                if (arrayA[i] === arrayB[j]){
+
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

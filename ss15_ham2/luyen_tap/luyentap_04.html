@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //4. Viết chương trình cho người dùng nhập vào 1 mảng số nguyên với độ dài cho người dùng tùy chọn
+        //              tuy nhiên không được lớn hơn 50.
+        // Sau đó tiếp tục thực hiện 2 yêu cầu:
+        //a) In ra mảng người dùng vừa nhập.
+        //b) Tính trung bình cộng của số chẵn tại vị trí lẻ trong mảng
+
+        let arrayInput =[];
+        let sum = 0;
+        let average = 0;
+        let count = 0;
+        for(let i = 0; i < 10 ; i++){
+            arrayInput[i] = parseInt(prompt('Nhập số nguyên vào mảng'));
+        }
+        //a) In ra mảng người dùng vừa nhập.
+        function averageNumber(average){
+            document.write('Mảng người dùng vừa nhập là:' + arrayInput + '<br>');
+            //b) Tính trung bình cộng của số chẵn tại vị trí lẻ trong mảng
+            for (let i = 1; i<arrayInput.length; i= i+2){
+                if (arrayInput[i] % 2 === 0){
+                    count ++;
+                    sum = sum + arrayInput[i];
+                }
+            }
+            if (count > 1) {
+                average = sum / count;
+                document.write('Trung bình cộng của các số chẳn là: ' +average)
+            }
+            else {
+                document.write('Không có số chẵn nào ở vị trí lẻ.')
+            }
+        }
+
+        averageNumber(average);
+
+    </script>
+</body>
+</html>

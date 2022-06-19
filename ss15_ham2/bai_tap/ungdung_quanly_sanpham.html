@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Add New Product</h3>
+<input type="text" id="producId" placeholder="New Product">
+<button onclick="add()" style="background: chartreuse">Add</button>
+<h3>Display Product</h3>
+<p id="result"></p>
+<script>
+    let array = ["Nokia", "Samsum", "Apple", "Xiaomi", "LG", "Vivo", "Oppo", "Huawei", "Motorola", "Realme", "TECNO"];
+    display();
+    function display() {
+        let list = "<table style='width: 600px'>";
+        list += "<tr>";
+        list += "<th align='left'>" + "Product Name" + "</th>";
+        list += "<th>" + "</th>";
+        list += "<th style='color: #d61b06' align='right'>" + array.length + " Products" + "</th>";
+        list += "</tr>";
+        for (let i = 0; i < array.length; i++) {
+            list += "<tr>";
+            list += "<td align='left'>" + array[i] + "</td>";
+            list += "<td>" + "<button onclick='up("+i+")' style='background: chartreuse'>Edit</button>" + "</td>";
+            list += "<td>" + "<button onclick='del("+i+")' style='background: chartreuse'>Delete</button>" + "</td>";
+            list += "</tr>";
+        }
+        list += "</table>";
+        document.getElementById("result").innerHTML = list;
+    }
+    function add() {
+        let product = document.getElementById("producId").value;
+        let index = 0;
+        for (let i=0; i<=array.length; i++) {
+            if (product===array[i]) {
+                alert("Same product name!")
+                index++;
+            }
+        }
+        if (index===0) {
+            array.push(product);
+            display();
+            alert("Add product  successful!");
+        }
+    }
+    function up(value) {
+        let name = prompt("nhap")
+        array[value] = name;
+        display();
+    }
+    function del(value) {
+        array.splice(value, 1);
+        display();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // 1. Viết 1 hàm nhận vào 1 số nguyên bất kì.
+        // Hiển thị các số KHÔNG phải số nguyên tố từ 0 đến số đấy.
+
+        let number = parseInt(prompt('Nhập vào nguyên bất kỳ:'));
+        let divisor = 0;
+        function checkPrime(divisor){
+            for (let i = 0; i < number; i++) {
+                for (let j = 1; j <= i; j++) {
+                    if (i % j == 0) {
+                        divisor += 1;
+                    }
+                }
+                if (divisor != 2) {
+                   document.write(+i + ', ');
+                }
+                divisor = 0;
+            }
+        }
+        checkPrime(divisor);
+
+
+        // let number = parseInt(prompt('Nhập vào nguyên bất kỳ:'));
+        // let divisor = 0;
+        // for (let i = 0; i < number; i++){
+        //     for (let j = 1; j <= i; j++){
+        //         if (i % j == 0){
+        //             divisor += 1;
+        //         }
+        //     }
+        //     if (divisor != 2) {
+        //         document.write( + i + ', ');
+        //     }
+        //     divisor = 0;
+        // }
+    </script>
+</body>
+</html>

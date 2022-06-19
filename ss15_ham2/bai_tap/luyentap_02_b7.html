@@ -12,13 +12,13 @@
             let temp = array[0];
             array[0] = array[1];
             array[1] = temp;
-            return array
+            return array;
         }
         let numberA = parseInt(prompt('Nhập vào số nguyên thứ nhất:'));
         let numberB = parseInt(prompt('Nhập vào số nguyên thứ hai:'));
         let array = [numberA, numberB];
         convert(numberA, numberB);
-        document.write(convert(array) + "<br>");
+        document.write((array) + "<br>");
         document.write(convert(array) + "<br>");
     </script>
 </body>
