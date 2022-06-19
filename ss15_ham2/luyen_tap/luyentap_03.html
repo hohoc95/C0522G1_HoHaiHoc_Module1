@@ -10,37 +10,33 @@
         //          và phải thỏa mãn 2 yêu cầu:
         //          thứ nhất số đó thuộc dãy fibonacci , thứ 2 số đó phải là số nguyên tố.
         // In ra mảng đấy.
-
         let number = parseInt(prompt('Nhập vào 1 số nguyên:'));
-        let array = [];
-        for(let i = number; i>= 0; i--){
-            number = number - 1      // đã thử qua for i ++, array[i] += 1, nhưng không được nên sang i--
-            array[i] = number + 1 ; // mò đại chổ này, chưa hiểu lắm!!!!
-        }
-        document.write(array);
-        //Viết hàm số fibonacci
-        function numberFibonacci(array) {
-            for (let i = 0; i < array.length; i++){
-                if(array[i+ 2] !== array[i] + array[i +1]){
-                    array.pop(array[i + 2])
-                }
-            }
-        }
-        numberFibonacci(array);
-        function checkPrime(array){
-            for (let i = 2; i < array.length; i++) {
-                for (let j = 1; j <= i; j++) {
-                    if (i % j == 0) {
+        let result = [];
+
+        function numberFibonacciPrime(number) {
+            let seed1 = 0;
+            let seed2 = 1;
+            let seed3 = seed1 + seed2;
+            let array = [];
+
+            for (let seed1 = 1; seed1 <= number; seed1 ++) {
+                let divisor = 0;
+                for (let j = 1; j <= seed3; j ++) {
+                    if (seed3 % j === 0) {
                         divisor += 1;
                     }
                 }
-                if (divisor == 2) {
-                    document.write(+i + ', ');
+                if (divisor === 2 && seed3 < number) {
+                    array.push(seed3);
                 }
-                divisor = 0;
+                seed1 = seed2;
+                seed2 = seed3;
+                seed3 = seed1 + seed2;
             }
+            return array;
         }
-        checkPrime(array);
+        result = numberFibonacciPrime(number);
+        document.write(result);
 
 
         //Đây là cách tạo mảng số nguyên từ 0 đến số được truyền vào:

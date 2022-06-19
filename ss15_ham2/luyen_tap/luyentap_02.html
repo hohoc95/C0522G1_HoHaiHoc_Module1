@@ -10,64 +10,64 @@
         // Đếm số lần xuất hiện của các phần tử trong mảng đó.Ví dụ:
         // [ 1,2,3,3,2,4] => 1 : 1 lần , 2 : 2 lần, 3: 2 lần, 4: 1 lần.
 
-        // function countElement(array){
-        //     let newArray = [array[0]]; // newArray là 1 mảng có 1 phần tử là array[0] = 1
-        //     for (let i = 0; i < array.length; i++){
-        //         let index = 0;
-        //         for (let j = 0; j < newArray.length; j++){
-        //             if (array[i] === newArray[j]){
-        //                 index ++;
-        //             }
-        //         }
-        //         if (index === 0) {
-        //             newArray.push(array[i]);
-        //             // newArray được thêm những phần tử của array, sau đó vòng lặp chạy và những phần tử được thêm
-        //             // nhưng bị trùng sẽ làm index tăng lên 1, như vậy phần tử bị trùng sẽ bị loại.
-        //             // newArray sẽ có tất cả các phần tử (không tính trùng lặp) của array.
-        //         }
-        //     }
-        //     // document.write(newArray +'<br>'); //check newArray.
-        //     //document.write(newArray.length + '<br>'); //check newArray.length
-        //
-        //     // Đây là bước so sánh 2 mảng giống nhau
-        //     for (let i = 0; i < newArray.length; i ++){
-        //         let count = 0;
-        //         for (let j = 0; j < array.length; j++){
-        //             if (array[j] === newArray[i]){
-        //                 count ++;
-        //             }
-        //         }
-        //         document.write(newArray[i] + ": " + count + " lần." + "<br>");
-        //     }
-        // }
-        // let array = [1,2,3,4,5,2,3,4,5,3,4,5];
-        // countElement(array);
-        //
-        function countElemet(array) {
-            let newArray = [array[0]];
-            for (let i = 0; i < array.length; i++) {
+        function countElement(array){
+            let newArray = [array[0]]; // newArray là 1 mảng có 1 phần tử là array[0] = 1
+            for (let i = 0; i < array.length; i ++){
                 let index = 0;
-                for (let j = 0; j < newArray.length; j++) {
-                    if (array[i] === newArray[j]) {
-                        index++;
+                for (let j = 0; j < newArray.length; j ++){
+                    if (array[i] === newArray[j]){
+                        index ++;
                     }
                 }
                 if (index === 0) {
                     newArray.push(array[i]);
+                    // newArray được thêm những phần tử của array, sau đó vòng lặp chạy và những phần tử được thêm
+                    // nhưng bị trùng sẽ làm index tăng lên 1, như vậy phần tử bị trùng sẽ bị loại.
+                    // newArray sẽ có tất cả các phần tử (không tính trùng lặp) của array.
                 }
             }
-            for (let i = 0; i < newArray.length; i++) {
+            // document.write(newArray +'<br>'); //check newArray.
+            //document.write(newArray.length + '<br>'); //check newArray.length
+
+            // Đây là bước so sánh 2 mảng giống nhau
+            for (let i = 0; i < newArray.length; i ++){
                 let count = 0;
-                for (let j = 0; j < array.length; j++) {
-                    if (array[j] === newArray[i]) {
-                        count++;
+                for (let j = 0; j < array.length; j ++){
+                    if (array[j] === newArray[i]){
+                        count ++;
                     }
                 }
-                document.write(newArray[i] + ' : ' + count + '<br>');
+                document.write('số ' + newArray[i] + ": " + count + ' lần' + ', ');
             }
         }
-        let array = [1, 2, 3, 4, 5, 2, 3, 4, 5, 3, 4, 5];
-        countElemet(array);
+        let array = [1,2,3,4,5,2,3,4,5,3,4,5];
+        countElement(array);
+
+        // function countElemet(array) {
+        //     let newArray = [array[0]];
+        //     for (let i = 0; i < array.length; i++) {
+        //         let index = 0;
+        //         for (let j = 0; j < newArray.length; j++) {
+        //             if (array[i] === newArray[j]) {
+        //                 index++;
+        //             }
+        //         }
+        //         if (index === 0) {
+        //             newArray.push(array[i]);
+        //         }
+        //     }
+        //     for (let i = 0; i < newArray.length; i++) {
+        //         let count = 0;
+        //         for (let j = 0; j < array.length; j++) {
+        //             if (array[j] === newArray[i]) {
+        //                 count++;
+        //             }
+        //         }
+        //         document.write(newArray[i] + ' : ' + count + '<br>');
+        //     }
+        // }
+        // let array = [1, 2, 3, 4, 5, 2, 3, 4, 5, 3, 4, 5];
+        // countElemet(array);
 
     </script>
 </body>
