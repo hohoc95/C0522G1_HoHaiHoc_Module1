@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<canvas id="DemoCanvas" width="500" height="600"></canvas>-->
+<script>
+        class Rectangle {
+            constructor(longs, widths){
+                this.widths = widths;
+                this.longs = longs;
+            }
+            getLongs(){
+                return this.longs;
+            }
+            getWidths(){
+                return this.widths;
+            }
+            getPerimeter(){
+                return  (widths + longs ) * 2 ;
+            }
+            getArea(){
+                return widths * longs;
+            }
+            setLongs(newLongs){
+                this.longs = newLongs;
+            }
+            setWidths(newWidths){
+                this.widths = newWidths;
+            }
+        }
+        let rectangle = new Rectangle(50, 40);
+        let widths = rectangle.getWidths();
+        let longs = rectangle.getLongs();
+        let perimeter = rectangle.getPerimeter();
+        let area = rectangle.getArea();
+        document.write('Chu vi: ' + perimeter + ' và Diện tích: ' + area);
+    </script>
+</body>
+</html>

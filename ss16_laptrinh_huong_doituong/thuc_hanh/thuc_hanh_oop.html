@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // let myInfo = {
+        //     name: 'Lam',
+        //     age: 27,
+        //     adrress: 'VN',
+        //     getName: function () {
+        //         return this.name;
+        //     }
+        // };
+        // //truyền 1 key và value vào Obiject
+        // myInfo.email = 'lam@example.com';
+        //
+        // //truyền 1 key vi phạm nguyên tắc đặt tên
+        // myInfo['my-phone'] = '0123456789';
+        //
+        // console.log(myInfo);
+
+        //lấy value
+        //document.write(myInfo.name)
+
+        //key không có value thì trả về undefined
+
+        //xóa key- value
+        //delete myInfo.email;
+
+        //lưu trữ value là 1 functiom
+        //this.name là gì? trong phạm vi object myInfo.name
+        // this chính là biến myInfo, this.name === myInfo.name.
+
+        //Function ->> phương thức(method)
+        //Còn lại  ->> Thuộc tính(property)
+
+
+        //B1 tạo class bằng từ khóa function
+        // function DienThoai(ten, hangSX) {
+        //     //Khai báo thuộc tính
+        //     var ten = ten;
+        //     var hangSX = hangSX;
+        //
+        //     //Khai báo hành vi - function
+        //     this.goiDien = function () {
+        //         document.write(ten + ' đang gọi điện' + '<br>');
+        //     }
+        // }
+        //
+        // //B2 tạo đối tượng
+        // let iphone12 = new DienThoai('Iphone12', 'Apple');
+        // iphone12.goiDien();
+        //
+        // let samsungS10 = new DienThoai('SamSung S10', 'SamSung');
+        // samsungS10.goiDien();
+
+        class DienThoai{
+            constructor(ten, hangSX) {
+                this.ten = ten;
+                this.hangSX = hangSX;
+            }
+            goiDien(){
+                document.write(this.ten + ' đang gọi điện' + '<br>');
+            }
+
+            //setter - cập nhật giá trị cho thuộc tính
+            setTen(tenMoi){
+                this.ten = tenMoi;
+            }
+
+            //getter - trả về giá trị thuộc tính
+            getTen(tenMoi){
+                return this.ten;
+            }
+        }
+
+        //B2 tạo đối tượng
+        let iphone12 = new DienThoai('Iphone 12', 'Apple');
+        //iphone12.ten = 'Iphone 15'; truy cập trực tiếp thông qua tên đối tượng, không được khuyến khích không dùng cách này
+        iphone12.setTen('Iphone 15');// truy cập gián tiếp
+        //không nên truy xuất đối tượng bằng document.write.
+        //document.write(iphone12.getTen() + '<br>');
+        iphone12.goiDien();
+
+    </script>
+</body>
+</html>

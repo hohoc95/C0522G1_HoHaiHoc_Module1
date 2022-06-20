@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        class Temperature{
+            constructor(tempC) {
+                this.tempC = tempC;
+            }
+            getTempC(){
+                return this.tempC;
+            }
+            getTempF(){
+                return (9/5) * tempC + 32;
+            }
+            getTempK(){
+                return tempC + 273.15;
+            }
+            setTempC(newTempC){
+                this.tempC = newTempC;
+            }
+        }
+        let temperature = new Temperature(25);
+        let tempC = temperature.getTempC();
+        let tempK = temperature.getTempK();
+        let tempF = temperature.getTempF();
+        document.write('Nhiệt độ K: ' + tempK + ' và Nhiệt độ F: ' + tempF);
+    </script>
+</body>
+</html>
