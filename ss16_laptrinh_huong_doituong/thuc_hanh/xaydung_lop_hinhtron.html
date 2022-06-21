@@ -22,28 +22,35 @@
                 return this.radius;
             }
             getArea(){
-                return Math.PI * radius * radius;
+                return Math.PI * this.radius * this.radius;
             }
             getColor(){
                 return this.color;
             }
-            setRadius(newRadius){
-                this.radius = newRadius;
+            setRadius(radius){
+                this.radius = radius;
             }
 
-            setColor(newColor){
-                this.color = newColor;
+            setColor(color){
+                this.color = color;
+            }
+            toString(){
+                return 'Diện tích hình tròn: ' + this.getArea() + ' và màu của hình tròn ' + this.getColor();
             }
         }
         let circle = new Circle(2, 'blue')
 
-        let radius = circle.getRadius();
-        let color = circle.getColor()
-        let area = circle.getArea()
-        document.write('Diện tích hình tròn: ' + area + '<br>');
-        document.write('Màu của hình tròn: '+color);
+        document.write(circle.toString());
+
+        // let radius = circle.getRadius();
+        // let color = circle.getColor()
+        // let area = circle.getArea()
+        // document.write('Diện tích hình tròn: ' + area + '<br>');
+        // document.write('Màu của hình tròn: '+color);
 
 
+
+        ////////////////////////////////////////////////////////////////////////////
         //
         // let Circle = function (radius){
         //     this.radius = radius;

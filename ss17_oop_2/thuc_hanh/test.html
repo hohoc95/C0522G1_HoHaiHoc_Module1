@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Human {
+        constructor(name,age) {
+            this.name = name;
+            this.age = age;
+        }
+        toString(){
+            return "Name: " +this.name + ". Age: " + this.age;
+        }
+    }
+
+    let human1 = new Human("Hoc", 27);
+    document.write(human1.toString() + "<br>");
+    let human2 = new Human(27,"Hoc")
+    document.write(human2.toString());
+
+</script>
+</body>
+</html>

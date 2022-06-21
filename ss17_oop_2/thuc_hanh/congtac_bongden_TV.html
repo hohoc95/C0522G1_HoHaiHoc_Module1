@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Công tắc - bóng đèn - TV</title>
+</head>
+<body>
+    <script>
+        class SwicthButton{
+            constructor(lamp, tivi, status) {
+                this.lamp = lamp;
+                this.tivi = tivi;
+                this.status = status;
+            }
+            getLamp(){
+                return this.lamp;
+            }
+            getTivi(){
+                return this.tivi;
+            }
+            connectToLamp(ElectricLamp){
+                return this.lamp = ElectricLamp;
+            }
+            connectToTivi(Tivi){
+                return this.tivi = Tivi;
+            }
+            switchOff(){
+                this.tivi.status = false;
+                this.lamp.status = false;
+                return this.status = false;
+            }
+            switchOn(){
+                this.tivi.status = true;
+                this.lamp.status = true;
+                return this.status = true;
+            }
+        }
+        class ElectricLamp{
+            constructor(status) {
+                this.status = status;
+            }
+            getStatus(){
+                return this.status;
+            }
+        }
+        class Tivi{
+            constructor(status) {
+                this.status = status;
+            }
+            getStatus(){
+                return this.status;
+            }
+        }
+        let eclectricLamp_1 = new ElectricLamp(false);
+        let tivi_1 = new Tivi(false);
+        let swicthButton_1 = new SwicthButton(eclectricLamp_1, false);
+        let swicthButton_2 = new SwicthButton(tivi_1, false)
+
+        document.write(swicthButton_1.switchOn() + '<br>');
+        document.write(eclectricLamp_1.getStatus() + '<br>');
+        document.write(swicthButton_2.switchOn() + '<br>');
+        document.write(tivi_1.getStatus() + '<br>');
+
+        document.write(swicthButton_1.switchOff() + '<br>');
+        document.write(eclectricLamp_1.getStatus() + '<br>');
+        document.write(swicthButton_2.switchOff() + '<br>');
+        document.write(tivi_1.getStatus() + '<br>');
+
+    </script>
+</body>
+</html>

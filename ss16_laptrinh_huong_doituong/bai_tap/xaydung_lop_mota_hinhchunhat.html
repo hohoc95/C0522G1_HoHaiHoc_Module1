@@ -19,24 +19,31 @@
                 return this.widths;
             }
             getPerimeter(){
-                return  (widths + longs ) * 2 ;
+                return  (this.widths + this.longs ) * 2 ;
             }
             getArea(){
-                return widths * longs;
+                return this.widths * this.longs;
             }
-            setLongs(newLongs){
-                this.longs = newLongs;
+            setLongs(longs){
+                this.longs = longs;
             }
-            setWidths(newWidths){
-                this.widths = newWidths;
+            setWidths(widths){
+                this.widths = widths;
+            }
+
+            toString(){
+                return 'Chu vi: ' + this.getPerimeter() + ' và Diện tích: ' + this.getArea();
             }
         }
         let rectangle = new Rectangle(50, 40);
-        let widths = rectangle.getWidths();
-        let longs = rectangle.getLongs();
-        let perimeter = rectangle.getPerimeter();
-        let area = rectangle.getArea();
-        document.write('Chu vi: ' + perimeter + ' và Diện tích: ' + area);
+        // let widths = rectangle.getWidths();
+        // let longs = rectangle.getLongs();
+
+        // let perimeter = rectangle.getPerimeter();
+        // let area = rectangle.getArea();
+        //document.write('Chu vi: ' + perimeter + ' và Diện tích: ' + area);
+
+        document.write(rectangle.toString());
     </script>
 </body>
 </html>

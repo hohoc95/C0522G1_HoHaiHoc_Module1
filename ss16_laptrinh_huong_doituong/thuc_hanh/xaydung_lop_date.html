@@ -21,14 +21,17 @@
                 getYear() {
                     return this.year;
                 }
-                setDay(newDay){
-                    this.day = newDay;
+                setDay(day){
+                    this.day = day;
                 }
-                setMonth(newMonth){
-                    this.month = newMonth;
+                setMonth(month){
+                    this.month = month;
                 }
-                setYear(newYear){
-                    this.year = newYear;
+                setYear(year){
+                    this.year = year;
+                }
+                toString(){
+                    return this.getDay() + '/' + this.getMonth() + '/' + this.getYear();
                 }
         }
         let date = new MyDate(19, 3, 2000)
@@ -38,12 +41,16 @@
         date.setMonth(3);
         date.setYear(2000);
 
-        //trả về giá trị day, month, year
-        let day = date.getDay();
-        let month = date.getMonth();
-        let year = date.getYear();
 
-        document.write(day + '/' + month + '/' + year);
+
+        //trả về giá trị day, month, year
+        // let day = date.getDay();
+        // let month = date.getMonth();
+        // let year = date.getYear();
+        //
+        // document.write(day + '/' + month + '/' + year);
+
+        document.write(date.toString());
 
 
     </script>
