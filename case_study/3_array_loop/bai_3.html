@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //Cho một danh sách các phân số, hãy tìm chỉ số của phân số lớn nhất (đếm từ 0)
+        //Giả định rằng không có các phân số bằng nhau trong tập đầu vào
+        //Ví dụ: numerators = [5, 2, 5] và denominators = [6, 3, 4],
+                                                    // thì kết quả maxFraction(numerators, denominators) = 2.
+        //⇨	5/4 là phân số lớn nhất, có chỉ số là 2.
+
+
+        let numeratorsLength = parseInt(prompt('Nhập vào độ dài mảng'))
+        let numerators = [];
+        for (let i = 0; i < numeratorsLength; i++){
+            numerators[i] = parseInt(prompt('Nhập vào tử số'))
+        }
+        let denominatorsLength = parseInt(prompt('Nhập vào độ dài mảng'))
+        let denominators = [];
+        for (let i = 0; i < denominatorsLength; i++){
+            denominators[i] = parseInt(prompt('Nhập vào mẫu số'))
+        }
+
+        let max = numerators[0] / denominators[0];
+        let numerator = numerators[0];
+        let denominator = denominators[0];
+        let index = 0;
+
+        for (let i = 1; i <numerators.length; i++) {
+            if (numerators[i] / denominators[i] > max) {
+                max = numerators[i] / denominators[i];
+                numerator = numerators[i];
+                denominator = denominators[i];
+                index = i;
+            }
+        }
+        document.write(numerator + "/" + denominator + " là phân số lớn nhất, có chỉ số là " + index);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let string = prompt('Nhập vào 1 chuỗi:');
+        function countCharacter(string) {
+            let array = [string[0]];
+            for(let i = 1; i < string.length ; i++){
+                let count = 0;
+                for (let j = 0; j < array.length; j++){
+                    if(string[i] === array[j]){
+                        count++;
+                    }
+                }
+                if(count === 0){
+                    array.push(string[i]);
+                }
+            }
+        return array;
+        }
+        document.write(countCharacter(string));
+    </script>
+</body>
+</html>

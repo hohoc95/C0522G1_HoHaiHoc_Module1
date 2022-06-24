@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let lengthArrayA = parseInt(prompt('Nhập vào độ dài của mảng: '));
+        let arrayA = [];
+        for(let i = 0; i < lengthArrayA; i++){
+            arrayA[i] = parseInt(prompt('Nhập sô vào mảng: '));
+        }
+        let arrayB = [];
+        let sum = 0;
+        for (let i = 0; i < lengthArrayA; i++){
+            sum = sum + arrayA[i];
+            arrayB[i] = sum;
+        }
+        document.write('Mảng A: ' + arrayA + '<br>');
+        document.write('Mảng B:' + arrayB);
+    </script>
+</body>
+</html>

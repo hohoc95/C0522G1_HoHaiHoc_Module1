@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // chuyển chuỗi nhập từ người dùng sang toàn bộ chữ thường (tolowerCase).
+        // Sau đó duyệt vòng lặp, những chữ đầu tiên của từ là chữ hoa.
+        // VD: Vũ Quang Đạt, chữ V là chữ đầu tiên (if chữ đầu tiên không có dấu cách).
+        // chữ Q (quang) là chữ trước dấu cách.
+        // Chữ Đ (đạt) là chữ trước dấu cách.
+
+        let inputString = prompt('Nhập vào một chuỗi:');
+        document.write('Chuỗi ban đầu: ' + inputString + '<br>')
+        let newString = '';
+        let stringA = inputString.toLowerCase().trim(); //chuyển chuổi đã nhập sang toàn bộ chữ thường
+        document.write("chuỗi đang chạy: "+stringA+"<br>");
+        newString  +=stringA[0].toUpperCase();
+        for (i =1 ; i < stringA.length ; i++){
+            if (stringA[i] !== ' ' && stringA[i-1] === ' ') {
+                newString  +=stringA[i].toUpperCase();
+            }
+            else{
+                newString+=stringA[i];
+            }
+        }
+        document.write('Kết quả: ' + newString);
+    </script>
+</body>
+</html>
