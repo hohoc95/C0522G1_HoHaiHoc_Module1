@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Tìm số thân thiết
+    let number1;
+    let number2;
+    do {
+        number1 = parseInt(prompt('input a number 1 :'));
+    } while (number1 % number1 !== 0 || number1 <= 0);
+    do {
+        number2 = parseInt(prompt('input a number 1 :'));
+    } while (number2 % number2 !== 0 || number2 <= 0);
+    let sum1 = 0;
+    let sum2 = 0;
+    for (let i = 1; i < number1; i++) {
+        if (number1 % i === 0) {
+            sum1 += i;
+        }
+    }
+    for (let i = 1; i < number2; i++) {
+        if (number2 % i === 0) {
+            sum2 += i;
+        }
+    }
+    if (number1===sum2 && number2===sum1){
+        alert('so ' + number1 + ' va so ' + number2 + ' la so than thiet');
+    } else {
+        alert('so ' + number1 + ' va so ' + number2 + ' khong phai la so than thiet')
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let month;
+    do {
+        month = parseInt(prompt('input a month: '));
+    } while (month > 12 || month <= 0);
+    let year = parseInt(prompt('input a year: '));
+    switch (month) {
+        case 4 || 6 || 9 || 11:
+            document.write('thang ' + month + ' nam ' + year + ' co 30 ngay');
+            break;
+        case 2:
+            if (year % 4 === 0) {
+                if (year % 100 === 0) {
+                    if (year % 400 === 0) {
+                        document.write('thang ' + month + ' nam ' + year + ' co 29 ngay');
+                    } else {
+                        document.write('thang ' + month + ' nam ' + year + ' co 28 ngay');
+                    }
+                } else {
+                    document.write('thang ' + month + ' nam ' + year + ' co 29 ngay');
+                }
+            } else {
+                document.write('thang ' + month + ' nam ' + year + ' co 28 ngay');
+            }
+            break;
+        default:
+            document.write('thang ' + month + ' nam ' + year + ' co 31 ngay');
+    }
+</script>
+</body>
+</html>

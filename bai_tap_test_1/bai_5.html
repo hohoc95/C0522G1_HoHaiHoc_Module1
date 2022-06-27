@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Tìm số hoàn hảo
+    let number;
+    do {
+        number = parseInt(prompt('input a number:'));
+    } while (number % number !== 0 || number <= 0);
+    let sum = 0;
+    for (let i = 1; i < number; i++) {
+        if (number % i === 0) {
+            sum += i;
+        }
+    }
+    if (number === sum) {
+        alert('so ' + number + ' la so hoan hao');
+    } else {
+        alert('so ' + number + ' khong la so hoan hao');
+    }
+</script>
+</body>
+</html>
