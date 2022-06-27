@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 1 Giải đề thi module 1.
+
+    // Kiểm tra được số lượng phần tử nhập vào <= 50
+    do {
+        arrayNumbers = parseInt(prompt('Số phần tử của mảng: '))
+    }
+    while (!(arrayNumbers > 0 && arrayNumbers < 50 && arrayNumbers % 1 == 0))
+
+    // Thêm phần tử vào mảng
+    let array = [];
+    for (let i = 0; i < arrayNumbers; i++) {
+        array[i] = parseInt(prompt('Nhập vào phần tử của mảng'));
+    }
+    // Hiển thị được mảng
+    document.write(array + '<br>');
+
+    // Hiển thị được: kết quả trung bình của các phần tử chia hết cho 5 ở vị trí chia hết cho 3
+
+    //let average = 0;
+    let count = 0;
+    let sum = 0;
+
+    for (let i = 0; i < arrayNumbers; i += 3) {
+        if (array[i] % 5 === 0) {
+            sum += array[i];
+            count++;
+        }
+    }
+    document.write('Số phần tử chia hết cho 5 ở vị trí chia hết cho 3 là: ' + count + '<br>');
+    document.write('Trung bình cộng của các phần tử chia hết cho 5 ở vị trí chia hết cho 3: ' + sum / count);
+
+    //Cách 2
+    // let number;
+    // let arrayA = [];
+    // do {
+    //     number = parseInt(prompt('nhap so phan tu ban muon nhap vao mang: '));
+    // } while (number > 50 || number%number !==0 || number <= 0);
+    // for (let i = 0; i < number; i++) {
+    //     arrayA[i] = parseInt(prompt('nhap mot so:'));
+    // }
+    // document.write('mang ban nhap la: ' + arrayA + '<br>');
+    // let sum = 0;
+    // let count = 0;
+    // for (let i = 0; i < arrayA.length; i++) {
+    //     if (arrayA[i] % 5 === 0) {
+    //         if (i % 3 === 0) {
+    //             sum += arrayA[i];
+    //             count++;
+    //         }
+    //     }
+    // }
+    // document.write('gia tri trung binh cua mang chia het cho 5 tai index chia het cho 3 la: ' + sum / count);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 2 Giải đề thi module 1
+    // Khai báo được hàm có tham số truyền vào
+    function checkString(string)
+    {
+        // Dùng thuật toán lấy được cụm từ viết hoa.
+        let resultString = [];
+
+        //Fdsfsdf Sfdss Adfssf
+        for(let i = 0; i < string.length; i++){
+            if(string[i] !== ' ' && ( string[i - 1] === ' ' || string[i -1] === undefined)){
+                resultString.push(string[i].toUpperCase());
+            }
+        }
+        if(resultString.length > 1){
+            return resultString.join('');
+        }
+        else{
+            return 'Chuỗi chỉ có 1 từ nên không cần viết tắc';
+        }
+    }
+    let string = prompt('Nhập vào 1 chuỗi');
+
+    // Hiển thị được kết quả
+    document.write(string + '<br>');
+
+    document.write('Kết quả: ' + checkString(string));
+
+    //Cách 2
+    // let character;
+    // do {
+    //     character = prompt('nhap 1 chuoi cac ky tu:');
+    // } while (character % character === 0);
+    // let word = character.trim();
+    // let arr = word.split('');
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i] === ' ' && arr[i - 1] === ' ') {
+    //         arr.splice(i, 1);
+    //     }
+    // }
+    // function exchangeWord(arr) {
+    //     if (arr.includes(' ') === true) {
+    //         let array = [];
+    //         array[0] = arr[0].toUpperCase();
+    //         for (let i = 1; i < arr.length; i++) {
+    //             if (arr[i] !== ' ' && arr[i - 1] === ' ') {
+    //                 arr[i] = arr[i].toUpperCase();
+    //                 array.push(arr[i]);
+    //             }
+    //         }
+    //         return array.join('');
+    //     } else {
+    //         alert('Chuỗi chỉ có 1 từ nên không cần viết tắc');
+    //     }
+    // }
+    // document.write('cum tu viet tat cua chuoi la: ' + exchangeWord(arr));
+
+</script>
+</body>
+</html>

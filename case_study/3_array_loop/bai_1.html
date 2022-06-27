@@ -14,8 +14,9 @@
         let arrayB = [];
         let sum = 0;
         for (let i = 0; i < lengthArrayA; i++){
-            sum = sum + arrayA[i];
-            arrayB[i] = sum;
+            sum += arrayA[i];
+            arrayB.push(sum);
+            // arrayB[i] = sum;
         }
         document.write('Mảng A: ' + arrayA + '<br>');
         document.write('Mảng B:' + arrayB);

@@ -6,11 +6,11 @@
 </head>
 <body>
 <script>
-    function sumEvenNumber(array2d) {
+    function calculateSum(array2d) {
         let sum = 0;
-        for (let i=0; i<array2d.length; i++) {
-            for (let j=0; j<array2d[i].length; j++) {
-                if (array2d[i][j]%2===0) {
+        for (let i = 0; i <array2d.length; i++) {
+            for (let j = 0; j < array2d[i].length; j++) {
+                if (array2d[i][j] % 2=== 0) {
                     sum += array2d[i][j];
                 }
             }
@@ -24,14 +24,14 @@
     for (let i = 0; i < row; i++) {
         document.write("[ ");
         let array = [];
-        for (let j=0; j<col; j++) {
+        for (let j = 0; j < col; j++) {
             array[j] = parseInt(prompt("Nhập matrix[" + i + "][" + j + "]"));
             document.write(array[j] + "  ");
         }
         matrix[i] = array;
         document.write(" ]" + "<br>");
     }
-    document.write("Tổng các số chắn trong Ma trận là " + sumEvenNumber(matrix));
+    document.write("Tổng các số chắn trong Ma trận là " + calculateSum(matrix));
 </script>
 </body>
 </html>

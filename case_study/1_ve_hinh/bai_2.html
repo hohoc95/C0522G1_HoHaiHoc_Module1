@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let high = parseInt(prompt('Nhập vào chiều cao: '));
+    let triangle = "<table>";
+    for (let i = 1; i <= high; i++) {
+        triangle += "<tr>";
+        for (let j = 1; j <= i; j++) {
+            if (j === 1 || i === high || i === j){
+                triangle += "<td>" + '*' + "</td>";
+            }
+            else {
+                triangle += "<td>" + "</td>";
+            }
+        }
+        triangle += "</tr>";
+    }
+    triangle += "</table>";
+    document.write(triangle);
+</script>
+</body>
+</html>

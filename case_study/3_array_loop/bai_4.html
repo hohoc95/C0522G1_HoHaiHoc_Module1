@@ -6,16 +6,53 @@
 </head>
 <body>
     <script>
-        let numberArray =['0','1','2','3','4','5','6','7','8','9'];
-        let letterArray = ['không','một','hai','ba','bốn','năm','sáu','bảy','tám','chín'];
-        let numbers = prompt('Hãy nhập vào số:');
-        for(let i = 0; i < numbers.length; i++){
-            for (let j = 0; j < numberArray.length; j++){
-                if(numbers[i] === numberArray[j]){
-                    document.write(letterArray[j] + ' ');
-                }
+        let integer = prompt('nhập vào một số nguyên:');
+        // let array = integer.split("");
+        for (let i=0; i<integer.length;i++){
+            switch (integer[i]) {
+                case '0':
+                    document.write('zero' + ', ');
+                    break;
+                case '1':
+                    document.write('one' + ', ');
+                    break;
+                case '2':
+                    document.write('two' + ', ');
+                    break;
+                case '3':
+                    document.write('three' + ', ');
+                    break;
+                case '4':
+                    document.write('four' + ', ');
+                    break;
+                case '5':
+                    document.write('five' + ', ');
+                    break;
+                case '6':
+                    document.write('six' + ', ');
+                    break;
+                case '7':
+                    document.write('seven' + ', ');
+                    break;
+                case '8':
+                    document.write('eight' + ', ');
+                    break;
+                case '9':
+                    document.write('nine' + ', ');
+                    break;
             }
         }
+        // Cách khác
+        // let numberArray =['0','1','2','3','4','5','6','7','8','9'];
+        // let letterArray = ['không','một','hai','ba','bốn','năm','sáu','bảy','tám','chín'];
+        // let numbers = prompt('Hãy nhập vào số:');
+        // for(let i = 0; i < numbers.length; i++){
+        //     for (let j = 0; j < numberArray.length; j++){
+        //         if(numbers[i] === numberArray[j]){
+        //             document.write(letterArray[j] + ' ');
+        //         }
+        //     }
+        // }
     </script>
 </body>
 </html>

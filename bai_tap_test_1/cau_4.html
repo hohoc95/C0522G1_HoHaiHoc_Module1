@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 4 Giải đề thi module 1
+
+    class BankAccount{
+        constructor(id, nameAccount, nameBank, totalAccount){
+            this.id = id;
+            this.nameAccount = nameAccount;
+            this.nameBank = nameBank;
+            this.totalAccount = totalAccount;
+        }
+        getId(){
+            return this.id;
+        }
+        setId(id){
+            this.id = id;
+        }
+        getNameAccount(){
+            return this.nameAccount;
+        }
+        setNameAccount(nameAccount){
+            this.nameAccount = nameAccount;
+        }
+        getNameBanck(){
+            return this.nameBank;
+        }
+        setNameBank(nameBank){
+            this.nameBank = nameBank;
+        }
+        getTotalAccount(){
+            return this.totalAccount;
+        }
+        setTotalAccount(totalAccount){
+            this.totalAccount = totalAccount;
+        }
+        toString(){
+            return 'ID: ' +  this.getId() + '<br>' + 'Tên chủ tài khoản: ' + this.getNameAccount() + '<br>' + 'Tên ngân hàng: ' + this.getNameBanck() + '<br>' + 'Tổng số tiền trong tài khoản: ' + this.getTotalAccount() + ' VND';
+        }
+    }
+    let account = new BankAccount ('012345','Fall in Love', 'VietcomBank', 2000000)
+    document.write(account.toString())
+</script>
+</body>
+</html>
