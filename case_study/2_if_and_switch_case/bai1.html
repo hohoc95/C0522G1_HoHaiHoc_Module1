@@ -13,21 +13,40 @@
         // 10% thuế thu nhập nếu lương từ 7 đến 15 triệu.
         // 5% thuế thu nhập nếu lương dưới 7 triệu
 
-        let grossSalary = parseInt(prompt('Nhập vào tiền lương: '));
-        let tax = 0; // Đây là thuế
-        let netSalary = 0; // Đây là lương ròng.
-
-        if(grossSalary < 7){
-            tax = 5;
+        let salary = parseFloat(prompt("Nhập tiền lương (VND): "));
+        let tax;
+        let netSalary;
+        if (salary < 7000000) {
+            tax = salary*5/100;
         }
-        else if (grossSalary < 15){
-            tax = 10;
+        else
+        if (salary < 15000000) {
+            tax = salary*10/100;
         }
         else {
-            tax = 20;
+            tax = salary*20/100;
         }
-        netSalary = grossSalary - grossSalary * tax / 100;
-        document.write('Lương ròng: ' + netSalary)
+        netSalary = salary - tax;
+        document.write("Tiền lương: " + salary + " (VND)" + "<br>");
+        document.write("Thuế thu nhập: " + tax + " (VND)" + "<br>");
+        document.write("Tiền lương ròng: " + netSalary + " (VND)" + "<br>");
+
+        //Cách 2
+        // let grossSalary = parseInt(prompt('Nhập vào tiền lương: '));
+        // let tax = 0; // Đây là thuế
+        // let netSalary = 0; // Đây là lương ròng.
+        //
+        // if(grossSalary < 7){
+        //     tax = 5;
+        // }
+        // else if (grossSalary < 15){
+        //     tax = 10;
+        // }
+        // else {
+        //     tax = 20;
+        // }
+        // netSalary = grossSalary - grossSalary * tax / 100;
+        // document.write('Lương ròng: ' + netSalary)
 
     </script>
 </body>

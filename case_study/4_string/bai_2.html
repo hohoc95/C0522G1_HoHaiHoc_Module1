@@ -6,23 +6,44 @@
 </head>
 <body>
     <script>
-        let string = prompt('Nhập vào 1 chuỗi:');
-        function countCharacter(string) {
-            let array = [string[0]];
-            for(let i = 1; i < string.length ; i++){
-                let count = 0;
-                for (let j = 0; j < array.length; j++){
-                    if(string[i] === array[j]){
-                        count++;
+
+        function differentSymbolsNaive(string) {
+            let array = [];
+            for (let i=0; i<string.length; i++) {
+                let index = 0;
+                for (let j=0; j<array.length; j++) {
+                    if (string[i]===array[j]) {
+                        index++;
                     }
                 }
-                if(count === 0){
+                if (index===0) {
                     array.push(string[i]);
                 }
             }
-        return array;
+            return array;
         }
-        document.write(countCharacter(string));
+        let string = prompt("Nhập chuỗi bất kì: ");
+        document.write("Chuỗi đã nhập: " + string + "<br>");
+        document.write("Các kí tự khác nhau trong chuỗi: " + differentSymbolsNaive(string) + "<br>");
+        document.write("Số kí tự khác nhau trong chuỗi: " + differentSymbolsNaive(string).length);
+
+        // let string = prompt('Nhập vào 1 chuỗi:');
+        // function countCharacter(string) {
+        //     let array = [string[0]];
+        //     for(let i = 1; i < string.length ; i++){
+        //         let count = 0;
+        //         for (let j = 0; j < array.length; j++){
+        //             if(string[i] === array[j]){
+        //                 count++;
+        //             }
+        //         }
+        //         if(count === 0){
+        //             array.push(string[i]);
+        //         }
+        //     }
+        // return array;
+        // }
+        // document.write(countCharacter(string));
     </script>
 </body>
 </html>

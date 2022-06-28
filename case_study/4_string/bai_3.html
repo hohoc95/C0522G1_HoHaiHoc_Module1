@@ -6,35 +6,56 @@
 </head>
 <body>
 <script>
-    let string1 = prompt('Nhập vào 1 chuỗi:');
-    let string2 = prompt('Nhập vào 1 chuỗi:');
-    function countCharacter(string1, string2) {
-        let array = [string1[0]];
-        for (let i = 0; i < string1.length; i++) {
-            let index = 0;
-            for (let j = 0; j < array.length; j++) {
-                if (string1[i] === array[j]) {
-                    index++;
-                }
-            }
-            if (index === 0) {
-                array.push(string1[i]);
-            }
-        }
-        //document.write('lần 1 ' + array + '<br>');
-        let count = 0;
-        for (let i = 0; i < array.length; i++){
-            for (let j = 0; j < string2.length; j++){
-                if (array[i] === string2[j]){
-                    count++;
+    function ommonCharacterCount(string1, string2) {
+        let array2 = string2.split('');
+        let array = [];
+        for (let i=0; i<string1.length; i++) {
+            for (let j=0; j<array2.length; j++) {
+                if (string1[i]===array2[j]) {
+                    array.push(array2[j]);
+                    array2.splice(j, 1);
                     break;
                 }
             }
         }
-        //document.write('lần 2 ' + array + '<br>');
         return array;
     }
-    document.write(countCharacter(string1, string2))
+    let string1 = prompt("Nhập chuỗi thứ nhất: ");
+    let string2 = prompt("Nhập chuỗi thứ hai: ");
+    document.write("Chuỗi thứ nhất: " + string1 + "<br>");
+    document.write("Chuỗi thứ hai: " + string2 + "<br>");
+    document.write("Các kí tự chung: " + ommonCharacterCount(string1, string2) + "<br>");
+    document.write("Số lượng kí tự chung: " + ommonCharacterCount(string1, string2).length);
+
+    // let string1 = prompt('Nhập vào 1 chuỗi:');
+    // let string2 = prompt('Nhập vào 1 chuỗi:');
+    // function countCharacter(string1, string2) {
+    //     let array = [string1[0]];
+    //     for (let i = 0; i < string1.length; i++) {
+    //         let index = 0;
+    //         for (let j = 0; j < array.length; j++) {
+    //             if (string1[i] === array[j]) {
+    //                 index++;
+    //             }
+    //         }
+    //         if (index === 0) {
+    //             array.push(string1[i]);
+    //         }
+    //     }
+    //     //document.write('lần 1 ' + array + '<br>');
+    //     let count = 0;
+    //     for (let i = 0; i < array.length; i++){
+    //         for (let j = 0; j < string2.length; j++){
+    //             if (array[i] === string2[j]){
+    //                 count++;
+    //                 break;
+    //             }
+    //         }
+    //     }
+    //     //document.write('lần 2 ' + array + '<br>');
+    //     return array;
+    // }
+    // document.write(countCharacter(string1, string2))
 
 </script>
 </body>

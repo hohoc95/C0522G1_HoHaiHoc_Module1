@@ -6,42 +6,74 @@
 </head>
 <body>
 <script>
-    function checkMaxMin() {
+    let row = parseInt(prompt("Nhập số phần tử trong mảng 2 chiều: "));
+    let col;
+    let array2d = [];
+    for (let i=0; i<row; i++) {
         let array = [];
-        let row = parseInt(prompt('Nhập số dòng của mảng:'));
-        let col = parseInt(prompt('Nhập số cột:'));
-
-        for (let i = 0; i < row; i++) {
-            let arr = [];
-            for (let j = 0; j < col; j++) {
-                arr[j] = parseInt(prompt('Nhập số \[' + i + '\]\[' + j + '\]: '));
-            }
-            array.push(arr);
+        col = parseInt(prompt("Nhập số phần tử của array2d[" + i + "]: "));
+        for (let j=0; j<col; j++) {
+            array[j] = parseInt(prompt("Nhập array2d[" + i + "][" + j + "]"));
         }
-
-        let max = array[0][0];
-        for (let i = 0; i < row; i++) {
-            for (let j = 0; j < col; j++) {
-                if (array[i][j] > array[0][0]) {
-                    max = array[i][j];
-                }
-            }
-        }
-
-        document.write('Giá trị lớn nhất : ' + max + '<br>');
-
-        let min = array[0][0];
-        for (let i = 0; i < row; i++) {
-            for (let j = 0; j < col; j++) {
-                if (array[i][j] < array[0][0]) {
-                    min = array[i][j];
-                }
-            }
-        }
-
-        document.write('Giá trị nhỏ nhất : ' + min);
+        array2d[i] = array;
     }
-    checkMaxMin();
+    function checkPrime(array) {
+        let arrayPrime = [];
+        for (let i=0; i<array.length; i++) {
+            for (let j=0; j<array[i].length; j++) {
+                let divisor = 0;
+                for (let k=1; k<= array[i][j]; k++) {
+                    if (array[i][j] % k === 0) {
+                        divisor++;
+                    }
+                }
+                if (divisor===2) {
+                    arrayPrime.push(array[i][j]);
+                }
+            }
+        }
+        return arrayPrime;
+    }
+    document.write("Các số nguyên tố trong mảng: " + checkPrime(array2d) + "<br>"); //đề k nói rõ là các snt phải khác nhau hay k.
+    document.write("Có " + checkPrime(array2d).length + " số nguyên tố trong mảng.");
+
+
+    // function checkMaxMin() {
+    //     let array = [];
+    //     let row = parseInt(prompt('Nhập số dòng của mảng:'));
+    //     let col = parseInt(prompt('Nhập số cột:'));
+    //
+    //     for (let i = 0; i < row; i++) {
+    //         let arr = [];
+    //         for (let j = 0; j < col; j++) {
+    //             arr[j] = parseInt(prompt('Nhập số \[' + i + '\]\[' + j + '\]: '));
+    //         }
+    //         array.push(arr);
+    //     }
+    //
+    //     let max = array[0][0];
+    //     for (let i = 0; i < row; i++) {
+    //         for (let j = 0; j < col; j++) {
+    //             if (array[i][j] > array[0][0]) {
+    //                 max = array[i][j];
+    //             }
+    //         }
+    //     }
+    //
+    //     document.write('Giá trị lớn nhất : ' + max + '<br>');
+    //
+    //     let min = array[0][0];
+    //     for (let i = 0; i < row; i++) {
+    //         for (let j = 0; j < col; j++) {
+    //             if (array[i][j] < array[0][0]) {
+    //                 min = array[i][j];
+    //             }
+    //         }
+    //     }
+    //
+    //     document.write('Giá trị nhỏ nhất : ' + min);
+    // }
+    // checkMaxMin();
 </script>
 </body>
 </html>

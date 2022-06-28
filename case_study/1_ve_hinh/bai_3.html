@@ -6,15 +6,16 @@
 </head>
 <body>
 <script>
-    let high = parseInt(prompt('Nhập vào chiều cao: '));
+    let height = parseInt(prompt("Nhập chiều cao tam giác cân: "));
     let triangle = "<table>";
-    for (let i = 1; i <= high; i++) {
+    for (let i=1; i<=height; i++) {
         triangle += "<tr>";
-        for (let j = 1; j <= i + (high - 1); j++) {
-            if (j <= 5 - i) {
+        for (let j=1; j<=height*2-1; j++) {
+            if (j<=height-i || j>=height+i) {
                 triangle += "<td>" + "</td>";
-            } else {
-                triangle += "<td>" + '*' + "</td>";
+            }
+            else {
+                triangle += "<td>" + "*" + "</td>";
             }
         }
         triangle += "</tr>";

@@ -6,37 +6,69 @@
 </head>
 <body>
 <script>
-    function checkPrime(){
+    let row = parseInt(prompt("Nhập số phần tử trong mảng 2 chiều: "));
+    let col;
+    let array2d = [];
+    for (let i=0; i<row; i++) {
         let array = [];
-        let row = parseInt(prompt('Nhập số dòng của mảng:'));
-        let col = parseInt(prompt('Nhập só cột của mảng:'));
-        for (let i = 0; i < row; i++) {
-            let arr = [];
-            for (let j = 0; j < col; j++) {
-                arr[j] = parseInt(prompt('Nhập số \[' + i + '\]\[' + j + '\]: '));
-            }
-            array.push(arr);
-            document.write((arr + '<br>'));
+        col = parseInt(prompt("Nhập số phần tử của array2d[" + i + "]: "));
+        for (let j=0; j<col; j++) {
+            array[j] = parseInt(prompt("Nhập array2d[" + i + "][" + j + "]"));
         }
-
-        document.write(array + '<br>');
-        let prime = []
-        for (let i = 0; i < row; i++) {
-            for (let j = 0; j < col; j++) {
-                let count = 0;
-                for (let k = 1; k <= array[i][j]; k++) {
+        array2d[i] = array;
+    }
+    function checkPrime(array) {
+        let arrayPrime = [];
+        for (let i=0; i<array.length; i++) {
+            for (let j=0; j<array[i].length; j++) {
+                let divisor = 0;
+                for (let k=1; k<= array[i][j]; k++) {
                     if (array[i][j] % k === 0) {
-                        count++;
+                        divisor++;
                     }
                 }
-                if (count === 2) {
-                    prime.push(array[i][j]);
+                if (divisor===2) {
+                    arrayPrime.push(array[i][j]);
                 }
             }
         }
-        document.write(prime.length + ' Số nguyên tố trong mảng: ' + prime);
+        return arrayPrime;
     }
-    checkPrime();
+    document.write("Các số nguyên tố trong mảng: " + checkPrime(array2d) + "<br>"); //đề k nói rõ là các snt phải khác nhau hay k.
+    document.write("Có " + checkPrime(array2d).length + " số nguyên tố trong mảng.");
+
+
+    // function checkPrime(){
+    //     let array = [];
+    //     let row = parseInt(prompt('Nhập số dòng của mảng:'));
+    //     let col = parseInt(prompt('Nhập só cột của mảng:'));
+    //     for (let i = 0; i < row; i++) {
+    //         let arr = [];
+    //         for (let j = 0; j < col; j++) {
+    //             arr[j] = parseInt(prompt('Nhập số \[' + i + '\]\[' + j + '\]: '));
+    //         }
+    //         array.push(arr);
+    //         document.write((arr + '<br>'));
+    //     }
+    //
+    //     document.write(array + '<br>');
+    //     let prime = []
+    //     for (let i = 0; i < row; i++) {
+    //         for (let j = 0; j < col; j++) {
+    //             let count = 0;
+    //             for (let k = 1; k <= array[i][j]; k++) {
+    //                 if (array[i][j] % k === 0) {
+    //                     count++;
+    //                 }
+    //             }
+    //             if (count === 2) {
+    //                 prime.push(array[i][j]);
+    //             }
+    //         }
+    //     }
+    //     document.write(prime.length + ' Số nguyên tố trong mảng: ' + prime);
+    // }
+    // checkPrime();
 </script>
 </body>
 </html>

@@ -10,22 +10,44 @@
         // Ký tự là bất kỳ được nhập từ bàn phím.
         // Các ký tự nguyên âm bao gồm: 'o', 'u', 'i', 'a', 'e' hoặc 'O', 'U', 'I', 'A', 'E'
 
-        let inputCharacter = prompt('Nhập vào 1 ký tự: ');
-        switch (inputCharacter) {
-            case 'o' :
-            case 'u' :
-            case 'i' :
-            case 'a' :
-            case 'e' :
-            case 'O' :
-            case 'U' :
-            case 'I' :
-            case 'A' :
-            case 'E' :
-                alert('Đây là nguyên âm');
+        let characters;
+        do {
+            characters = prompt("Vui lòng nhập một ký tự trong bảng chữ cái tiếng Anh: ");
+        } while (characters.length!==1)
+        switch (characters) {
+            case "o":
+            case "u":
+            case "i":
+            case "a":
+            case "e":
+            case "O":
+            case "U":
+            case "I":
+            case "A":
+            case "E":
+                alert("Nguyên âm!");
                 break;
-            default: alert('Không phải nguyên âm');
+            default:
+                alert("Không phải nguyên âm!");
         }
+
+        //Cách 2
+        // let inputCharacter = prompt('Nhập vào 1 ký tự: ');
+        // switch (inputCharacter) {
+        //     case 'o' :
+        //     case 'u' :
+        //     case 'i' :
+        //     case 'a' :
+        //     case 'e' :
+        //     case 'O' :
+        //     case 'U' :
+        //     case 'I' :
+        //     case 'A' :
+        //     case 'E' :
+        //         alert('Đây là nguyên âm');
+        //         break;
+        //     default: alert('Không phải nguyên âm');
+        // }
     </script>
 </body>
 </html>

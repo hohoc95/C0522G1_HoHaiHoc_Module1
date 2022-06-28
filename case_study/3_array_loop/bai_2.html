@@ -6,44 +6,83 @@
 </head>
 <body>
     <script>
-        let arrayA = [];
-        let arrayALength = parseInt(prompt('Nhập vào độ dài của mảng'));
-        for (let i = 0; i < arrayALength; i++) {
-            arrayA[i] = parseInt(prompt('Nhập số nguyên vào mảng 1:'));
-        }
-        document.write('mảng A: ' + arrayA + '<br>' + '<br>');
 
-        let arrayB = [];
-        let arrayBLength = parseInt(prompt('Nhập vào độ dài của mảng B'));
-
-        for (let i = 0; i < arrayBLength; i++) {
-            arrayB[i] = parseInt(prompt('Nhập số nguyên vào mảng 2:'));
-        }
-        document.write('mảng B: ' + arrayB + '<br>' + '<br>');
-
-        let arrayC = [];
-        for (let i = 0; i < arrayB.length; i++) {
-
-            if (!arrayA.includes(arrayB[i]) && !arrayC.includes(arrayB[i])) {
-                arrayC.push(arrayB[i]);
+        function checkArray(arrayA, arrayB) {
+            let arrayC = [];
+            for (let i=0; i<arrayB.length; i++) {
+                if (arrayA.includes(arrayB[i])===false && arrayC.includes(arrayB[i])===false) {
+                    arrayC.push(arrayB[i]);
+                }
             }
-        }
-
-        document.write('***** arrayC: ' + arrayC + '<br>' + '<br>');
-
-
-        for (let i = 0; i < arrayC.length; i++) {
-                for (let j = i; j < arrayC.length; j++) {
-                    if (arrayC[i] > arrayC[j]) {
-                        let temp = arrayC[j];
-                        arrayC[j] = arrayC[i];
-                        arrayC[i] = temp
+            for (let i=0; i<arrayC.length; i++) {
+                for (let j=0; j<=i; j++) {
+                    if (arrayC[i]<arrayC[j]) {
+                        let temp = arrayC[i];
+                        arrayC[i] = arrayC[j];
+                        arrayC[j] = temp;
                     }
                 }
             }
+            if (arrayC.length>1) {
+                return arrayC;
+            }
+            else {
+                return "Không tìm thấy!"
+            }
+        }
+        let numberA = parseInt(prompt("Nhập số phần tử của mảng A: "));
+        let arrayA = [];
+        for (let i=0;i<numberA; i++) {
+            arrayA[i] = parseInt(prompt("Nhập phần tử " + i));
+        }
+        let numberB = parseInt(prompt("Nhập số phần tử của mảng B: "));
+        let arrayB = [];
+        for (let i=0;i<numberB; i++) {
+            arrayB[i] = parseInt(prompt("Nhập phần tử " + i));
+        }
+        document.write("Mảng A: " + arrayA + "<br>");
+        document.write("Mảng B: " + arrayB + "<br>");
+        document.write("Kết quả: " + checkArray(arrayA, arrayB));
+
+        // Cách 2
+        // let arrayA = [];
+        // let arrayALength = parseInt(prompt('Nhập vào độ dài của mảng'));
+        // for (let i = 0; i < arrayALength; i++) {
+        //     arrayA[i] = parseInt(prompt('Nhập số nguyên vào mảng 1:'));
+        // }
         // document.write('mảng A: ' + arrayA + '<br>' + '<br>');
+        //
+        // let arrayB = [];
+        // let arrayBLength = parseInt(prompt('Nhập vào độ dài của mảng B'));
+        //
+        // for (let i = 0; i < arrayBLength; i++) {
+        //     arrayB[i] = parseInt(prompt('Nhập số nguyên vào mảng 2:'));
+        // }
         // document.write('mảng B: ' + arrayB + '<br>' + '<br>');
-        document.write('missingValue(A, B): ' + arrayC);
+        //
+        // let arrayC = [];
+        // for (let i = 0; i < arrayB.length; i++) {
+        //
+        //     if (!arrayA.includes(arrayB[i]) && !arrayC.includes(arrayB[i])) {
+        //         arrayC.push(arrayB[i]);
+        //     }
+        // }
+        //
+        // document.write('***** arrayC: ' + arrayC + '<br>' + '<br>');
+        //
+        //
+        // for (let i = 0; i < arrayC.length; i++) {
+        //         for (let j = i; j < arrayC.length; j++) {
+        //             if (arrayC[i] > arrayC[j]) {
+        //                 let temp = arrayC[j];
+        //                 arrayC[j] = arrayC[i];
+        //                 arrayC[i] = temp
+        //             }
+        //         }
+        //     }
+        // // document.write('mảng A: ' + arrayA + '<br>' + '<br>');
+        // // document.write('mảng B: ' + arrayB + '<br>' + '<br>');
+        // document.write('missingValue(A, B): ' + arrayC);
     </script>
 </body>
 </html>

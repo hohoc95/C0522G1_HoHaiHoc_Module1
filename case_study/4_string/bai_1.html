@@ -12,21 +12,60 @@
         // chữ Q (quang) là chữ trước dấu cách.
         // Chữ Đ (đạt) là chữ trước dấu cách.
 
-        let inputString = prompt('Nhập vào một chuỗi:');
-        document.write('Chuỗi ban đầu: ' + inputString + '<br>')
-        let newString = '';
-        let stringA = inputString.toLowerCase().trim(); //chuyển chuổi đã nhập sang toàn bộ chữ thường
-        document.write("chuỗi đang chạy: "+stringA+"<br>");
-        newString  +=stringA[0].toUpperCase();
-        for (i =1 ; i < stringA.length ; i++){
-            if (stringA[i] !== ' ' && stringA[i-1] === ' ') {
-                newString  +=stringA[i].toUpperCase();
+        function checkString(string) {
+            let arrayString = [];
+            let arrayCount = [];
+            let newString = "";
+            let count = 0;
+            let max = count;
+            for (let i=0; i<string.length; i++) {
+                if (string[i] !== " ") {
+                    if (string[i-1] === " " || string[i-1] === undefined) {
+                        newString += string[i].toUpperCase();
+                    }
+                    else {
+                        newString += string[i].toLowerCase();
+                    }
+                    count++;
+                    if (string[i+1] === " " || string[i+1] === undefined) {
+                        arrayString.push(newString);
+                        arrayCount.push(count);
+                        if (count>max) {
+                            max = count;
+                        }
+                        newString = "";
+                        count = 0;
+                    }
+                }
             }
-            else{
-                newString+=stringA[i];
+            document.write("Trước khi chuẩn hóa: " + string + "<br>");
+            document.write("Sau khi chuẩn hóa: " + arrayString.join(" ") + "<br>");
+            let array = [];
+            for (let i=0; i<arrayCount.length; i++) {
+                if (arrayCount[i]===max) {
+                    array.push(arrayString[i]);
+                }
             }
+            document.write("Từ dài nhất: " + array + " (" + max + " kí tự)" + "<br>");
         }
-        document.write('Kết quả: ' + newString);
+        let string = prompt("Nhập xâu kí tự: ");
+        checkString(string);
+
+        // let inputString = prompt('Nhập vào một chuỗi:');
+        // document.write('Chuỗi ban đầu: ' + inputString + '<br>')
+        // let newString = '';
+        // let stringA = inputString.toLowerCase().trim(); //chuyển chuổi đã nhập sang toàn bộ chữ thường
+        // document.write("chuỗi đang chạy: "+stringA+"<br>");
+        // newString  +=stringA[0].toUpperCase();
+        // for (i =1 ; i < stringA.length ; i++){
+        //     if (stringA[i] !== ' ' && stringA[i-1] === ' ') {
+        //         newString  +=stringA[i].toUpperCase();
+        //     }
+        //     else{
+        //         newString+=stringA[i];
+        //     }
+        // }
+        // document.write('Kết quả: ' + newString);
     </script>
 </body>
 </html>

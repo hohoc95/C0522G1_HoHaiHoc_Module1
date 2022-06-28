@@ -8,42 +8,76 @@
 <script>
     // Bài 3 Giải đề thi module 1
     // Khai báo được hàm có tham số truyền vào
-    //function checkArray(array) {
-        let array = [];
-        let arrayLength = prompt('Nhập vào độ dài mảng');
-        for(let i = 0; i <arrayLength; i++){
-            array[i] = parseInt(prompt('Nhập số vào mảng'));
-        }
-        array.sort(function(a,b){
+
+    //hàm sắp xếp mảng chạy từ nhỏ tới lớn;
+    function checkFibonasi(arr) {
+        arr.sort(function (a, b) {
             return a - b;
         })
-        document.write('Mảng đã nhập: ' + array + '<br>');
-
-        //Hàm trả được về một mảng các số fibonaci
-
+        let newArr=[0,1];
         let number1 = 0;
         let number2 = 1;
-        let number3 = 1 ;
-        let arrFibonaci = [number1,number2];
+        let number3 = 1;
 
-        for(let i = 1; i <= array[arrayLength -1]; i++){
+        while (number3 <= arr[arr.length - 1]) {
+            newArr.push(number3);
             number1 = number2;
             number2 = number3;
             number3 = number1 + number2;
-            if(number3 <= array[arrayLength -1]){
-                arrFibonaci.push(number3);
+        }
+        let arrResult = [];
+        for(let i=0;i<arr.length;i++) {
+            if(newArr.includes(arr[i])) {
+                arrResult.push(arr[i]);
             }
         }
-        document.write('Mảng fibonaci: ' + arrFibonaci + '<br>');
+        return arrResult;
+    }
+    let array =[];
+    let number =parseInt(prompt("nhập vào chiều dài mảng"));
+    for(let i=0;i<number;i++) {
+        array[i]=parseInt(prompt("nhập vào phần tử mảng"));
+    }
+    document.write("mảng đã nhập: "+array+"<br>");
+    document.write("kết quả: "+checkFibonasi(array));
 
-        let resultArray = [];
-        for(let i = 0; i < arrayLength; i++){
-            if(array.includes(arrFibonaci[i])){
-                resultArray.push(arrFibonaci[i]);
-            }
-        }
-        //return
-        document.write('Mảng số fibonaci được tìm thấy trong mảng: ' + resultArray + '<br>')
+    ///////////////////////////////////////////////////////////////
+    //function checkArray(array) {
+    //     let array = [];
+    //     let arrayLength = prompt('Nhập vào độ dài mảng');
+    //     for(let i = 0; i <arrayLength; i++){
+    //         array[i] = parseInt(prompt('Nhập số vào mảng'));
+    //     }
+    //     array.sort(function(a,b){
+    //         return a - b;
+    //     })
+    //     document.write('Mảng đã nhập: ' + array + '<br>');
+    //
+    //     //Hàm trả được về một mảng các số fibonaci
+    //
+    //     let number1 = 0;
+    //     let number2 = 1;
+    //     let number3 = 1 ;
+    //     let arrFibonaci = [number1,number2];
+    //
+    //     for(let i = 1; i <= array[arrayLength -1]; i++){
+    //         number1 = number2;
+    //         number2 = number3;
+    //         number3 = number1 + number2;
+    //         if(number3 <= array[arrayLength -1]){
+    //             arrFibonaci.push(number3);
+    //         }
+    //     }
+    //     document.write('Mảng fibonaci: ' + arrFibonaci + '<br>');
+    //
+    //     let resultArray = [];
+    //     for(let i = 0; i < arrayLength; i++){
+    //         if(array.includes(arrFibonaci[i])){
+    //             resultArray.push(arrFibonaci[i]);
+    //         }
+    //     }
+    //     //return
+    //     document.write('Mảng số fibonaci được tìm thấy trong mảng: ' + resultArray + '<br>')
     //}
     //checkArray(array);
 
