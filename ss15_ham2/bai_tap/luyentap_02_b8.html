@@ -7,21 +7,38 @@
 <body>
     <script>
         //Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
-        let arrayNumbers = [];
-        for (let i = 0; i < 5; i++) {
-            arrayNumbers[i] = prompt('Nhập vào mảng số nguyên:');
-        }
-        let inveseNumbers = [];
-        let result = [];
 
-        function inveseArray(arrayNumbers) {
-            for (i = arrayNumbers.length - 1; i >= 0; i--) {
-                inveseNumbers[i] = arrayNumbers.shift();
+        function reverseArray(array) {
+            let first = 0;
+            let last = array.length-1
+            while (first<last) {
+                let change = array[first];
+                array[first] = array[last];
+                array[last] = change;
+                first++;
+                last--;
             }
-            return inveseNumbers;
+            return array;
         }
-        result = inveseArray(arrayNumbers);
-        document.write(result);
+        let array = [1, 2, 3, 4, 5];
+        document.write("Mảng sau khi đã đảo ngược: " + reverseArray(array));
+
+        // Cách 2
+        // let arrayNumbers = [];
+        // for (let i = 0; i < 5; i++) {
+        //     arrayNumbers[i] = prompt('Nhập vào mảng số nguyên:');
+        // }
+        // let inveseNumbers = [];
+        // let result = [];
+        //
+        // function inveseArray(arrayNumbers) {
+        //     for (i = arrayNumbers.length - 1; i >= 0; i--) {
+        //         inveseNumbers[i] = arrayNumbers.shift();
+        //     }
+        //     return inveseNumbers;
+        // }
+        // result = inveseArray(arrayNumbers);
+        // document.write(result);
     </script>
 </body>
 </html>

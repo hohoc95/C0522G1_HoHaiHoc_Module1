@@ -10,28 +10,46 @@
         //                                      kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
         // Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
 
-        let characterArray = [];
-        for(let i = 0 ; i < 5 ; i++){
-            characterArray[i] = prompt('Nhập vào mảng ký tự');
-        }
-
-        let characterInput = prompt('Nhập vào ký tự bất kỳ');
-        let count= 0;
-        function checkCharacter(characterInput) {
-            for(let i = 0 ; i < 5 ; i++){
-                if(characterArray[i] === characterInput){
-                    count ++;
+        let array = ["t", "h", "u", "y", "e", "n", "t", "t", "h"];
+        function checkNumber(character) {
+            let index = 0;
+            for (let i=0; i<array.length; i++) {
+                if (character===array[i]) {
+                    index++;
                 }
             }
-            if (count > 0){
-                return document.write('Ký tự ' + characterInput + ' nằm trong mảng và xuất hiện ' + count + ' lần');
+            if (index===0) {
+                return -1;
             }
             else {
-                return document.write('-1');
+                return index;
             }
         }
-        let checked = checkCharacter(characterInput);
-        //document.write(checked);
+        let character = prompt("Nhập kí tự cần kiểm tra: ");
+        document.write(checkNumber(character));
+
+        // let characterArray = [];
+        // for(let i = 0 ; i < 5 ; i++){
+        //     characterArray[i] = prompt('Nhập vào mảng ký tự');
+        // }
+        //
+        // let characterInput = prompt('Nhập vào ký tự bất kỳ');
+        // let count= 0;
+        // function checkCharacter(characterInput) {
+        //     for(let i = 0 ; i < 5 ; i++){
+        //         if(characterArray[i] === characterInput){
+        //             count ++;
+        //         }
+        //     }
+        //     if (count > 0){
+        //         return document.write('Ký tự ' + characterInput + ' nằm trong mảng và xuất hiện ' + count + ' lần');
+        //     }
+        //     else {
+        //         return document.write('-1');
+        //     }
+        // }
+        // let checked = checkCharacter(characterInput);
+        // //document.write(checked);
 
     </script>
 </body>
